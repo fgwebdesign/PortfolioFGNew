@@ -12,6 +12,7 @@ import logoces from '../images/logoces.png'
 import logoasana from '../images/logoasana.png'
 import logoow from '../images/logoow.png'
 import logotailwind from '../images/logotailwind.png'
+import logonareia from '../images/nareia_logo.jpg'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -225,6 +226,25 @@ export const experiences = [
       "Figma",
       "WordPress",
       "Adobe Photoshop"
+    ],
+  },
+  {
+    id: 0,
+    img: logonareia,
+    role: "Mid Functional Tester",
+    company: "NAREIA SOFTWARE",
+    date: "2023 - actual",
+    desc: "Functional Tester para el proyecto de aplicación mobile Midinero.",
+    skills: [
+      "JIRA",
+      "Figma",
+      "Vysor",
+      "Zephyr",
+      "GitHub",
+      "BrowserStack",
+      "Slack",
+      "Confluence",
+      "Toggl",
     ],
   },
   {
