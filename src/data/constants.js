@@ -14,6 +14,7 @@ import logoow from '../images/logoow.png'
 import logotailwind from '../images/logotailwind.png'
 import logonareia from '../images/nareia_logo.jpg'
 import logodrones from '../images/drones.png'
+import logoecommerce from '../images/logoecommerce.jpeg'
 
 
 export const Bio = {
@@ -327,7 +328,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://media.licdn.com/dms/image/C4E0BAQGHCb04St_fNg/company-logo_200_200/0/1571002623430?e=1700092800&v=beta&t=gwGPutdVTGthAgZxv97a6U4l75mDN7QRIEzOoFtQSqw",
+    img:logoecommerce,
     role: "Frontend Developer",
     company: "E-Commerce Full",
     date: "2021 - 2021",
