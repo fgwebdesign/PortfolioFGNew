@@ -461,8 +461,6 @@ export const projects = [
     id: 9,
     title: "Picante Jerseys",
     date: "2023",
-    description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
     image: picanteimage,
     tags: [
       "HTML",
@@ -478,8 +476,6 @@ export const projects = [
     id: 9,
     title: "B & K Arquitectos",
     date: "2023",
-    description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
     image: bykimage,
     tags: [
       "HTML",
@@ -495,8 +491,6 @@ export const projects = [
     id: 0,
     title: "Del Arca Producciones",
     date: "2023",
-    description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
       image: delarcaimage,
       tags: [
         "HTML",
@@ -512,8 +506,6 @@ export const projects = [
     id: 1,
     title: "Shot By Jeydi",
     date: "2023",
-    description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
     image: shotbyjeydiimage,
     tags: [
       "HTML",
@@ -529,8 +521,6 @@ export const projects = [
     id: 2,
     title: "Moño Negro Catering",
     date: "2023",
-    description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
       image: monionegroimage,
       tags: [
         "HTML",
@@ -546,8 +536,6 @@ export const projects = [
     id: 3,
     title: "Castelier Bienes Raíces",
     date: "2023",
-    description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
     image: monionegroimage,
     tags: [
       "HTML",
@@ -564,8 +552,6 @@ export const projects = [
     id: 10,
     title: "Re-branding Duki Website",
     date: "2023",
-    description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
     image: dukoimage,
     tags: [
       "HTML",
@@ -582,8 +568,6 @@ export const projects = [
     id: 4,
     title: "Sabemar Turismo",
     date: "2022",
-    description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
     image: sabemarimage,
     tags: [
       "HTML",
@@ -599,8 +583,6 @@ export const projects = [
     id: 5,
     title: "Agribo Software",
     date: "2021",
-    description:
-      " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
     image: agriboimage,
     tags: [
       "HTML",
@@ -616,8 +598,6 @@ export const projects = [
     id: 6,
     title: "Seven Containers",
     date: "2021",
-    description:
-      "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
     image: sevenimage,
     tags: [
       "HTML",
