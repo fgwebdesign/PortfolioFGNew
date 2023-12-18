@@ -13,6 +13,8 @@ import logoasana from '../images/logoasana.png'
 import logoow from '../images/logoow.png'
 import logotailwind from '../images/logotailwind.png'
 import logonareia from '../images/nareia_logo.jpg'
+import logodrones from '../images/drones.png'
+
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -488,21 +490,6 @@ export const projects = [
     webapp: "https://trackify.duckdns.org",
   },
   {
-    id: 0,
-    title: "Del Arca Producciones",
-    date: "2023",
-      image: delarcaimage,
-      tags: [
-        "HTML",
-        "CSS",
-        "JSS",
-        "SCSS",
-      ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-  },
-  {
     id: 1,
     title: "Shot By Jeydi",
     date: "2023",
@@ -516,6 +503,21 @@ export const projects = [
     category: "web app",
     github: "https://github.com/rishavchanda/Project-Management-App",
     webapp: "https://vexa-app.netlify.app/",
+  },
+  {
+    id: 0,
+    title: "Del Arca Producciones",
+    date: "2023",
+      image: delarcaimage,
+      tags: [
+        "HTML",
+        "CSS",
+        "JSS",
+        "SCSS",
+      ],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
   },
   {
     id: 2,
@@ -534,9 +536,9 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Castelier Bienes Raíces",
+    title: "Drones orientales",
     date: "2023",
-    image: monionegroimage,
+    image: logodrones,
     tags: [
       "HTML",
       "CSS",
