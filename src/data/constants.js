@@ -9,12 +9,23 @@ import sevenimage from '../images/sevencontainers.png';
 import picanteimage from '../images/picantejerseys.png';
 import logofg from '../images/logofg.png'
 import logoces from '../images/logoces.png'
-import logoasana from '../images/logoasana.png'
-import logoow from '../images/logoow.png'
+import logoasana from '../images/asanalogo.png'
 import logotailwind from '../images/logotailwind.png'
 import logonareia from '../images/nareia_logo.jpg'
 import logodrones from '../images/drones.png'
 import logoecommerce from '../images/logoecommerce.jpeg'
+import logobrowserstack from '../images/browserstacklogo.png'
+import postmanlogo from '../images/postmanlogo.png'
+import logofigma from '../images/figmalogo.jpg'
+import logogit from '../images/gitlogo.png'
+import logogithub from '../images/githublogo.png'
+import logoxray from '../images/xraylogo.png'
+import logozephyr from '../images/zephyrlogo.png'
+import logovysor from '../images/vysorlogo.png'
+import logoappcenter from '../images/logoappcenter.png'
+import logotestflight from '../images/testflightlogo.png'
+import logotoggl from '../images/toggltracklogo.png'
+import logocmasmas from '../images/cmamalogo.png'
 
 
 export const Bio = {
@@ -88,9 +99,42 @@ export const skills = [
     skills: [
       {
         name: "Postman",
-        image:
-          "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
+        image: postmanlogo,
       },
+      {
+        name: "MongoDB",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+      },
+      {
+        name: "BrowserStack",
+        image: logobrowserstack,
+      },
+      {
+        name: "Xray Testing",
+        image: logoxray,
+      },
+      {
+        name: "Zephyr Testing",
+        image: logozephyr,
+      },
+      {
+        name: "Vysor Mirroring",
+        image: logovysor,
+      },
+      {
+        name: "App Center",
+        image: logoappcenter,
+      },
+      {
+        name: "TestFlight",
+        image: logotestflight,
+      },
+    ],
+  },
+  {
+    title: "Languages",
+    skills: [
       {
         name: "Cypress",
         image: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
@@ -110,47 +154,12 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "MongoDB",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        name: "C++",
+        image: logocmasmas,
       },
       {
         name: "JAVA",
-        image:"https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      },
-
-      {
-        name: "BrowserStack",
-        image: "https://www.passionateinmarketing.com/wp-content/uploads/2021/06/bstack_2x.png",
-      },
-    ],
-  },
-  {
-    title: "UX / UI",
-    skills: [
-      {
-        name: "Adobe Illustrator",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/6/66/Illustrator_CC_icon.png",
-      },
-      {
-        name: "Adobe Photoshop",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1024px-Adobe_Photoshop_CC_icon.svg.png",
-      },
-      {
-        name: "Optimal Workshop",
-        image: logoow,
-      },
-      {
-        name: "Figma",
-        image:
-          "https://camo.githubusercontent.com/ed93c2b000a76ceaad1503e7eb9356591b885227e82a36a005b9d3498b303ba5/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6669676d612f6669676d612d69636f6e2e737667",
-      },
-      {
-        name: "Notion",
-        image:
-        "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
     ],
   },
@@ -170,22 +179,24 @@ export const skills = [
       {
         name: "LaunchDarkly",
         image:
-        "https://seeklogo.com/images/L/launchdarkly-icon-logo-90A914028E-seeklogo.com.png",
+          "https://seeklogo.com/images/L/launchdarkly-icon-logo-90A914028E-seeklogo.com.png",
       },
       {
         name: "Bitrise",
         image:
-        "https://seeklogo.com/images/B/bitrise-logo-F0A2C4935A-seeklogo.com.png",
+          "https://seeklogo.com/images/B/bitrise-logo-F0A2C4935A-seeklogo.com.png",
       },
       {
         name: "Git",
-        image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+        image: logogit,
       },
       {
-        name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        name: "GitHub Desktop",
+        image: logogithub,
+      },
+      {
+        name: "Figma",
+        image: logofigma,
       },
       {
         name: "Slack",
@@ -195,7 +206,7 @@ export const skills = [
       {
         name: "JIRA",
         image:
-        "https://cdn.iconscout.com/icon/free/png-512/free-jira-3521518-2945021.png?f=avif&w=256",
+          "https://cdn.iconscout.com/icon/free/png-512/free-jira-3521518-2945021.png?f=avif&w=256",
       },
       {
         name: "asana",
@@ -204,9 +215,27 @@ export const skills = [
       {
         name: "ClickUp",
         image:
-        "https://logosandtypes.com/wp-content/uploads/2023/03/clickup.svg",
+          "https://logosandtypes.com/wp-content/uploads/2023/03/clickup.svg",
       },
-
+      {
+        name: "Toggl Track",
+        image: logotoggl,
+      },
+      {
+        name: "Adobe Illustrator",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/66/Illustrator_CC_icon.png",
+      },
+      {
+        name: "Adobe Photoshop",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1024px-Adobe_Photoshop_CC_icon.svg.png",
+      },
+      {
+        name: "Notion",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+      },
     ],
   },
 ];
@@ -215,7 +244,7 @@ export const experiences = [
   {
     id: 0,
     img: logofg,
-    role: "OWNER - Web Developer",
+    role: "CEO & Web Developer - Owner",
     company: "FG WEB DESIGNS",
     date: "2020 - actual",
     desc: "Especializado en la gestión de diseño y desarrollo de páginas web a medida, incluyendo E-Commerce, landings y sitios corporativos.",
@@ -234,10 +263,10 @@ export const experiences = [
   {
     id: 0,
     img: logonareia,
-    role: "Mid Functional Tester",
+    role: "Mid Functional Tester - Employed",
     company: "NAREIA SOFTWARE",
     date: "2023 - actual",
-    desc: "Functional Tester para el proyecto de aplicación mobile Midinero.",
+    desc: "Actualmente formo parte del equipo de QA para la aplicación móvil 'MiDinero', específicamente en el rol de Tester Funcional. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
     skills: [
       "JIRA",
       "Figma",
@@ -253,10 +282,10 @@ export const experiences = [
   {
     id: 0,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation",
+    role: "Quality Assurance Automation - Contractor",
     company: "Start QA",
-    date: "2023 - actual",
-    desc: "Proyecto de Automation en Kotlin para un cliente en Estados Unidos.",
+    date: "2022 - 2024",
+    desc: "Información Confidencial - Proyecto de Automation en Kotlin para un cliente en Estados Unidos.",
     skills: [
       "Kotlin",
       "Espresso Library",
@@ -272,10 +301,10 @@ export const experiences = [
   {
     id: 1,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation / Manual",
+    role: "Quality Assurance Automation / Manual - Contractor",
     company: "Start QA",
-    date: "2023 - actual",
-    desc: "Proyecto Automation y Manual que brinda servicios a empresas como Okta, Auth0, Azure, encargado del control de calidad, también de automatizar casos de prueba en Cypress.",
+    date: "2022 - 2023",
+    desc: "Información Confidencial - Proyecto Automation y Manual que brinda servicios a empresas como Okta, Auth0, Azure, encargado del control de calidad, también de automatizar casos de prueba en Cypress.",
     skills: [
       "Cypress",
       "LaunchDarkly",
@@ -291,10 +320,10 @@ export const experiences = [
   {
     id: 1,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Manual",
+    role: "Quality Assurance Manual - Contractor",
     company: "Start QA",
     date: "2022 - 2022",
-    desc: "Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
+    desc: "Información Confidencial - Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
     skills: [
       "Cypress",
       "LaunchDarkly",
@@ -310,10 +339,10 @@ export const experiences = [
   {
     id: 1,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation / Manual",
+    role: "Quality Assurance Automation / Manual - Contractor",
     company: "Start QA",
     date: "2021 - 2022",
-    desc: "Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
+    desc: "Información Confidencial - Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
     skills: [
       "Cypress",
       "LaunchDarkly",
@@ -328,7 +357,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img:logoecommerce,
+    img: logoecommerce,
     role: "Frontend Developer",
     company: "E-Commerce Full",
     date: "2021 - 2021",
@@ -396,7 +425,7 @@ export const education = [
   },
   {
     id: 2,
-    img: logoces, 
+    img: logoces,
     school: "Tester de Software",
     date: "2022",
     degree: "Centro de Ensayo de Software - Facultad de Ingenieria",
@@ -509,13 +538,13 @@ export const projects = [
     id: 0,
     title: "Del Arca Producciones",
     date: "2023",
-      image: delarcaimage,
-      tags: [
-        "HTML",
-        "CSS",
-        "JSS",
-        "SCSS",
-      ],
+    image: delarcaimage,
+    tags: [
+      "HTML",
+      "CSS",
+      "JSS",
+      "SCSS",
+    ],
     category: "web app",
     github: "https://github.com/rishavchanda/Podstream",
     webapp: "https://podstream.netlify.app/",
@@ -524,13 +553,13 @@ export const projects = [
     id: 2,
     title: "Moño Negro Catering",
     date: "2023",
-      image: monionegroimage,
-      tags: [
-        "HTML",
-        "CSS",
-        "JSS",
-        "SCSS",
-      ],
+    image: monionegroimage,
+    tags: [
+      "HTML",
+      "CSS",
+      "JSS",
+      "SCSS",
+    ],
     category: "machine learning",
     github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
     webapp: "https://brain-tumor.netlify.app/",

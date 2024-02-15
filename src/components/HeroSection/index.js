@@ -14,7 +14,7 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                    <Title>BIENVENIDO / A<br /> <span id="bio-name">{Bio.name}</span></Title>
+                    <Title>BIENVENIDO<br /> <span id="bio-name">{Bio.name}</span></Title>
                         <TextLoop>
                             <Span>
                                 <Typewriter
