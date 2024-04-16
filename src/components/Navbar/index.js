@@ -5,6 +5,8 @@ import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 import { FaLinkedin } from 'react-icons/fa';
+import logoImage from '../../images/logofgoriginal.png';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,8 +15,8 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-           <Span>FG WEB DESIGNS</Span>
+          <a style={{ display: "flex", alignItems: "center", cursor: 'pointer' }}>
+            <img src={logoImage} alt="FG Web Designs Logo" style={{ height: '80px', padding: '5px' }} />
           </a>
         </NavLogo>
         <MobileIcon>
@@ -30,9 +32,9 @@ const Navbar = () => {
           <NavLink href='#education'>Resumen</NavLink>
         </NavItems>
         <ButtonContainer>
-        <GitHubButton href={Bio.linkedin} target="_blank">
-        <FaLinkedin style={{ marginRight: '8px' }} /> LINKEDIN
-        </GitHubButton>
+          <GitHubButton href={Bio.linkedin} target="_blank">
+            <FaLinkedin style={{ marginRight: '8px' }} /> LINKEDIN
+          </GitHubButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -52,9 +54,9 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Resumen</MobileLink>
-          <GitHubButton style={{padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content'}} href={Bio.linkedin} target="_blank">
-          <FaLinkedin style={{ marginRight: '8px', verticalAlign: 'middle' }} /> LINKEDIN
-          </GitHubButton>
+            <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.linkedin} target="_blank">
+              <FaLinkedin style={{ marginRight: '8px', verticalAlign: 'middle' }} /> LINKEDIN
+            </GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

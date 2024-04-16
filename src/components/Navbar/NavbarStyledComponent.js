@@ -1,6 +1,15 @@
 import { Link as LinkR } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import _default from '../../themes/default';
+
+const floatAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+`;
 
 export const Nav = styled.div`
     background-color: ${({theme}) => theme.card_light};
@@ -34,10 +43,19 @@ export const NavLogo = styled(LinkR)`
     justify-content: start;
     align-items: center;
     text-decoration: none;
+    animation: ${floatAnimation} 3s ease-in-out infinite;
     @media (max-width: 640px) {
-      padding: 0 0px;
-  }
+        padding: 0 0px;
+    }
 `;
+
+export const LogoImage = styled.img`
+    height: 60px;
+    padding: 5px;
+    animation: ${floatAnimation} 3s ease-in-out infinite;
+`;
+
+
 export const Span = styled.div`
     padding: 0 4px;
     font-weight: bold;
