@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import WhatsAppModal from './components/WhatsAppModal';
+import { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import WhatsAppModal from '../WhatsAppModal/WhatsAppModal';
+import logoWpp from '../../images/logowpp.png';
 
-const Button = styled.button`
+
+const floatButtonAnimation = keyframes`
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+`;
+
+
+const ButtonContainer = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+`;
+
+
+const Button = styled.button`
+  background-color: transparent;
   color: white;
   border: none;
   border-radius: 50%;
@@ -18,18 +37,27 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: ${floatButtonAnimation} 2s ease-in-out infinite;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0,255,0,0.5);
+  }
 `;
 
 const WhatsAppButton = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <>
-            <Button onClick={() => setIsOpen(true)}>💬</Button>
+        <ButtonContainer>
+            <Button onClick={() => setIsOpen(true)}>
+                <img src={logoWpp} alt="WhatsApp" style={{ width: '80%', height: '80%' }} />
+            </Button>
             {isOpen && <WhatsAppModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
-        </>
+        </ButtonContainer>
     );
 };
 
 export default WhatsAppButton;
+
