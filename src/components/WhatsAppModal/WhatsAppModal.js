@@ -110,7 +110,7 @@ const WhatsAppModal = ({ isOpen, onClose }) => {
     const [message, setMessage] = useState('');
 
     const sendMessage = () => {
-        const whatsappURL = `https://wa.me/yourphonenumber?text=${encodeURIComponent(message)}`;
+        const whatsappURL = `https://wa.me/59892033831?text=${encodeURIComponent(message)}`;
         window.open(whatsappURL, '_blank');
         onClose();
     };
