@@ -26,6 +26,7 @@ import logoappcenter from '../images/logoappcenter.png'
 import logotestflight from '../images/testflightlogo.png'
 import logotoggl from '../images/toggltracklogo.png'
 import logocmasmas from '../images/cmamalogo.png'
+import logoucontact from '../images/logoucontact.png'
 
 
 export const Bio = {
@@ -40,7 +41,7 @@ export const Bio = {
     "Soy un Diseñador Web certificado y especialista en QA (Quality Assurance). Mi objetivo es brindar un servicio único y personalizado, enfocándome en darle ese toque profesional que le falta a tu marca o empresa.",
   github: "https://www.linkedin.com/in/felipegut/",
   resume:
-    "https://drive.google.com/file/d/1-xeZ-AkSF8jviCBJkXoL_B8zOAbhjg2G/view?usp=sharing",
+    "https://drive.google.com/file/d/12Zadd-wKJBZ8l951KFX7nFEqRtPN-VvT/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/felipegut/",
   insta: "https://www.instagram.com/fgwebdesign_/",
 };
@@ -262,14 +263,34 @@ export const experiences = [
   },
   {
     id: 0,
-    img: logonareia,
-    role: "Mid Functional Tester - Employed",
-    company: "NAREIA SOFTWARE",
-    date: "2023 - actual",
-    desc: "Actualmente formo parte del equipo de QA para la aplicación móvil 'MiDinero', específicamente en el rol de Tester Funcional. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
+    img: logoucontact,
+    role: "Quality Assurance Manual/Automation - Employed",
+    company: "Ucontact by net2phone",
+    date: "2024 - actual",
+    desc: "Actualmente formo parte del equipo de QA para la empresa Ucontact by net2phone. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
     skills: [
       "JIRA",
       "Figma",
+      "Zephyr",
+      "GitHub",
+      "BrowserStack",
+      "Slack",
+      "Confluence",
+    ],
+  },
+  {
+    id: 1,
+    img: logonareia,
+    role: "Mid Functional Tester - Employed",
+    company: "NAREIA SOFTWARE",
+    date: "2023 - 2024",
+    desc: "Formé parte del equipo de QA para la aplicación mobile 'MiDinero', específicamente en el rol de Tester Funcional. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
+    skills: [
+      "JIRA",
+      "Figma",
+      "Postman",
+      "Appcenter",
+      "TestFlight",
       "Vysor",
       "Zephyr",
       "GitHub",
@@ -280,7 +301,7 @@ export const experiences = [
     ],
   },
   {
-    id: 0,
+    id: 2,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
     role: "Quality Assurance Automation - Contractor",
     company: "Start QA",
@@ -299,7 +320,7 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
     role: "Quality Assurance Automation / Manual - Contractor",
     company: "Start QA",
@@ -318,7 +339,7 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
     role: "Quality Assurance Manual - Contractor",
     company: "Start QA",
@@ -337,7 +358,7 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
     role: "Quality Assurance Automation / Manual - Contractor",
     company: "Start QA",
@@ -356,7 +377,7 @@ export const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     img: logoecommerce,
     role: "Frontend Developer",
     company: "E-Commerce Full",
@@ -374,7 +395,7 @@ export const experiences = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     img: "https://pbs.twimg.com/profile_images/1224354283342254080/o8qBO7rA_400x400.jpg",
     role: "Web Designer / Marketing",
     company: "CellPay - DIRECTV AGENTE OFICIAL",
