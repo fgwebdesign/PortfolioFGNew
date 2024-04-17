@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import robotProfilePic from '../../images/roboticon.png';
 
@@ -114,6 +114,19 @@ const WhatsAppModal = ({ isOpen, onClose }) => {
         window.open(whatsappURL, '_blank');
         onClose();
     };
+
+    useEffect(() => {
+      if (isOpen) {
+        const timer = setTimeout(() => {
+            const audio = new Audio('./whatsapp.mp3');
+            audio.play().catch(error => console.error('Error playing sound:', error));
+        }, 3000);
+
+        return () => clearTimeout(timer);
+      }
+    }, [isOpen]);
+
+
 
     return (
         <ModalContainer className={isOpen ? 'open' : ''}>

@@ -1,17 +1,9 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import useSound from 'use-sound';
+import boopSfx from './whatsapp.mp3';
 import WhatsAppModal from '../WhatsAppModal/WhatsAppModal';
 import logoWpp from '../../images/logowpp.png';
-
-
-const floatButtonAnimation = keyframes`
-  0%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -10px, 0);
-  }
-`;
 
 
 const ButtonContainer = styled.div`
@@ -22,7 +14,6 @@ const ButtonContainer = styled.div`
   align-items: center;
   z-index: 100;
 `;
-
 
 const Button = styled.button`
   background-color: transparent;
@@ -38,8 +29,6 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: ${floatButtonAnimation} 2s ease-in-out infinite;
-
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 20px rgba(0,255,0,0.5);
@@ -47,16 +36,35 @@ const Button = styled.button`
 `;
 
 const WhatsAppButton = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [play, { stop }] = useSound(boopSfx, { volume: 0.7 });
 
-    return (
-        <ButtonContainer>
-            <Button onClick={() => setIsOpen(true)}>
-                <img src={logoWpp} alt="WhatsApp" style={{ width: '80%', height: '80%' }} />
-            </Button>
-            {isOpen && <WhatsAppModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
-        </ButtonContainer>
-    );
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1 && !isOpen) {
+        setIsOpen(true);
+        play(); 
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen, play]);
+
+  return (
+      <ButtonContainer>
+          <Button onClick={() => {
+              setIsOpen(true);
+              play();
+          }}>
+              <img src={logoWpp} alt="WhatsApp" style={{ width: '80%', height: '80%' }} />
+          </Button>
+          {isOpen && <WhatsAppModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+      </ButtonContainer>
+  );
 };
 
 export default WhatsAppButton;
