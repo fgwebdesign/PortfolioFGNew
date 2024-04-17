@@ -41,7 +41,7 @@ const WhatsAppButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1 && !isOpen) {
+      if (window.scrollY > 100 && !isOpen) {
         setIsOpen(true);
         play(); 
       }
