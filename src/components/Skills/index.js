@@ -1,50 +1,54 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { useSpring, animated } from '@react-spring/web';
+import { skills } from '../../data/constants';
+import toolsLeft from '../../images/tools.png';
+import toolsRight from '../../images/rocket.png';
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+`;
 
 const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
-
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 12px;
+  @media (max-width: 960px) {
+      flex-direction: column;
   }
 `;
 
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_primary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+const Title = styled.div`
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
+`;
+
+const Desc = styled.div`
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  color: ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -54,7 +58,7 @@ const SkillsContainer = styled.div`
   margin-top: 30px;
   gap: 30px;
   justify-content: center;
-`
+`;
 
 const Skill = styled.div`
   width: 100%;
@@ -72,9 +76,7 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-
-`
+`;
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -82,7 +84,7 @@ const SkillTitle = styled.h2`
   color: ${({ theme }) => theme.text_primary};
   margin-bottom: 20px;
   text-align: center;
-`
+`;
 
 const SkillList = styled.div`
   display: flex;
@@ -90,7 +92,7 @@ const SkillList = styled.div`
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
-`
+`;
 
 const SkillItem = styled.div`
   font-size: 16px;
@@ -111,40 +113,100 @@ const SkillItem = styled.div`
     font-size: 14px;
     padding: 6px 12px;
   }
-`
+`;
 
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
-`
+`;
 
+const fadeInSlideIn = keyframes`
+  0% {
+    transform: translateX(-100%); /* O más, dependiendo de la distancia deseada */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+`;
+
+const SideImage = styled.img`
+  position: absolute;
+  top: 30%;
+  left: 1%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: auto;
+  animation: ${fadeInSlideIn} 4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
+`;
+
+
+
+const RightImage = styled(animated.img)`
+  position: absolute;
+  right: 1%;
+  width: 160px;
+  height: auto;
+  bottom: 10%;
+`;
 
 const Skills = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const [floating, setFloating] = useState(false);
+
+  const rocketProps = useSpring({
+    from: { transform: 'translateY(100vh)', opacity: 0 },
+    to: {
+      transform: inView ? 'translateY(0vh)' : 'translateY(100vh)',
+      opacity: inView ? 1 : 0,
+    },
+    config: { mass: 0.1, tension: 100, friction: 24 },
+    onRest: () => {
+      if (inView) setFloating(true);
+    }
+  });
+
+  const floatingProps = useSpring({
+    to: [
+      { transform: 'translateY(0px)', config: { duration: 1000 } },
+      { transform: 'translateY(-20px)', config: { duration: 1000 } }
+    ],
+    loop: true, 
+    from: { transform: 'translateY(0px)' },
+    reset: floating 
+  });
+
   return (
-    <Container id="skills">
+    <Container id="skills" ref={ref}>
+      <SideImage src={toolsLeft} isVisible={inView} />
+      <RightImage style={floating ? floatingProps : rocketProps} src={toolsRight} />
       <Wrapper>
         <Title>Habilidades</Title>
-        <Desc>Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años.
-        </Desc>
+        <Desc>Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años.</Desc>
         <SkillsContainer>
           {skills.map((skill) => (
-            <Skill>
+            <Skill key={skill.id}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+                  <SkillItem key={item.id}>
+                    <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>
                 ))}
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
