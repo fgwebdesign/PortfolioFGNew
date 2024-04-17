@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from '@react-spring/web';
 import { skills } from '../../data/constants';
-import toolsLeft from '../../images/tools.png';
+import toolsLeft from '../../images/tools2.png';
 import toolsRight from '../../images/rocket.png';
 
 const Container = styled.div`
@@ -134,12 +134,15 @@ const fadeInSlideIn = keyframes`
 const SideImage = styled.img`
   position: absolute;
   top: 30%;
-  left: 1%;
+  left: 0.1%;
   transform: translateY(-50%);
-  width: 160px;
+  width: 220px;
   height: auto;
   animation: ${fadeInSlideIn} 4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
+  @media (max-width: 1024px) { 
+    display: none; 
+  }
 `;
 
 
@@ -150,6 +153,9 @@ const RightImage = styled(animated.img)`
   width: 160px;
   height: auto;
   bottom: 10%;
+  @media (max-width: 1024px) { 
+    display: none; 
+  }
 `;
 
 const Skills = () => {
@@ -166,7 +172,7 @@ const Skills = () => {
       transform: inView ? 'translateY(0vh)' : 'translateY(100vh)',
       opacity: inView ? 1 : 0,
     },
-    config: { mass: 0.1, tension: 100, friction: 24 },
+    config: { mass: 0.1, tension: 30, friction: 24 },
     onRest: () => {
       if (inView) setFloating(true);
     }

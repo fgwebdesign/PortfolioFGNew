@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import useSound from 'use-sound';
 import boopSfx from './whatsapp.mp3';
 import WhatsAppModal from '../WhatsAppModal/WhatsAppModal';
-import logoWpp from '../../images/logowpp.png';
+import logoWpp from '../../images/whatsapp.png';
 
 
 const ButtonContainer = styled.div`

@@ -1,18 +1,52 @@
 import React from 'react'
 import { useState } from 'react'
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
+import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider, AnimatedImage, AdditionalAnimatedImage } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
+import { useSpring } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
+import portfolioImage from '../../images/portfolio3.png';
+import additionalImage from '../../images/portfolio1.png';
 
 
-const Projects = ({openModal,setOpenModal}) => {
+const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState('all');
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const [additionalRef, additionalInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const portfolioImageProps = useSpring({
+    from: { transform: 'translateX(100%)', opacity: 0 },
+    to: {
+      transform: titleInView ? 'translateX(0%)' : 'translateX(100%)',
+      opacity: titleInView ? 1 : 0,
+    },
+    config: { tension: 20, friction: 10 },
+  });
+
+  const additionalImageProps = useSpring({
+    from: { transform: 'translateX(-100%)', opacity: 0 },
+    to: {
+      transform: additionalInView ? 'translateX(0%)' : 'translateX(-100%)',
+      opacity: additionalInView ? 1 : 0,
+    },
+    config: { tension: 20, friction: 20 },
+  });
+
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Portafolio</Title>
+        <Title ref={titleRef}>Portafolio</Title>
+        <AdditionalAnimatedImage ref={additionalRef} style={additionalImageProps} src={additionalImage} alt="Additional" />
+        <AnimatedImage style={portfolioImageProps} src={portfolioImage} alt="Portafolio" />
         <Desc>
-        He trabajado en una amplia gama de proyectos web. Estos son algunos de mis proyectos.
+          He trabajado en una amplia gama de proyectos web. Estos son algunos de mis proyectos.
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
@@ -42,12 +76,12 @@ const Projects = ({openModal,setOpenModal}) => {
         <CardContainer>
           {toggle === 'all' && projects
             .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
             ))}
           {projects
             .filter((item) => item.category == toggle)
             .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
             ))}
         </CardContainer>
       </Wrapper>

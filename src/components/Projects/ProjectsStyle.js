@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import _default from '../../themes/default';
+import { animated } from '@react-spring/web';
 
 export const Container = styled.div`
     background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
@@ -27,11 +28,37 @@ export const Wrapper = styled.div`
     }
 `;
 
+export const AnimatedImage = styled(animated.img)`
+  position: absolute;
+  right: 1px; 
+  top: 120px; 
+  width: 210px; 
+  height: auto; 
+  z-index: 10;
+  @media (max-width: 1024px) { 
+  display: none; 
+}
+`;
+
+export const AdditionalAnimatedImage = styled(AnimatedImage)`
+position: absolute;
+  right: auto;
+  left: 1px; 
+  top: 120px; 
+  width: 210px; 
+  height: auto; 
+  @media (max-width: 1024px) { 
+    display: none; 
+  }
+`;
+
+
+
 export const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
-margin-top: 20px;
+margin-top: 90px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
       margin-top: 12px;
