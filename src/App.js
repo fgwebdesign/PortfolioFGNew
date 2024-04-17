@@ -27,22 +27,22 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
         <Navbar />
         <Body>
-          <HeroSection />
+        <HeroSection id="home" />
           <Wrapper>
-            <Skills />
-            <Projects openModal={openModal} setOpenModal={setOpenModal} />
-            <Experience />
+          <Skills id="skills" />
+          <Projects id="projects" openModal={openModal} setOpenModal={setOpenModal} />
+          <Experience id="experience" />
           </Wrapper>
           <Wrapper>
-            <Education />
-            <Contact />
+          <Education id="education" />
+          <Contact id="contact" />
           </Wrapper>
           <Footer />
           {openModal.state &&

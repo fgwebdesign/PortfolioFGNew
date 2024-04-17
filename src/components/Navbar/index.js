@@ -1,67 +1,37 @@
-import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
+import { useState } from 'react';
+import { Nav, NavbarContainer, MobileIcon, NavMenu, NavLink, MenuLabel } from './NavbarStyledComponent';
 import { FaBars } from 'react-icons/fa';
-import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
-import { useTheme } from 'styled-components';
-import { FaLinkedin } from 'react-icons/fa';
-import logoImage from '../../images/logofgoriginal.png';
+import { useSpring } from '@react-spring/web';
 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuAnimation = useSpring({
+    transform: isOpen ? 'scaleY(1)' : 'scaleY(0)',
+    opacity: isOpen ? 1 : 0,
+    from: { transform: 'scaleY(0)', opacity: 0 },
+    config: { tension: 140, friction: 25 }
+  });
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", cursor: 'pointer' }}>
-            <img src={logoImage} alt="FG Web Designs Logo" style={{ height: '80px', padding: '5px' }} />
-          </a>
-        </NavLogo>
-        <MobileIcon>
-          <FaBars onClick={() => {
-            setIsOpen(!isOpen)
-          }} />
+        <MobileIcon onClick={() => setIsOpen(!isOpen)}>
+          <FaBars />
+          <MenuLabel>Menu</MenuLabel>
         </MobileIcon>
-        <NavItems>
-          <NavLink href="#about">Inicio</NavLink>
-          <NavLink href='#skills'>Habilidades</NavLink>
-          <NavLink href='#experience'>Experiencia</NavLink>
-          <NavLink href='#projects'>Portafolio</NavLink>
-          <NavLink href='#education'>Resumen</NavLink>
-        </NavItems>
-        <ButtonContainer>
-          <GitHubButton href={Bio.linkedin} target="_blank">
-            <FaLinkedin style={{ marginRight: '8px' }} /> LINKEDIN
-          </GitHubButton>
-        </ButtonContainer>
-        {
-          isOpen &&
-          <MobileMenu isOpen={isOpen}>
-            <MobileLink href="#about" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Inicio</MobileLink>
-            <MobileLink href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Habilidades</MobileLink>
-            <MobileLink href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experiencia</MobileLink>
-            <MobileLink href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Portafolio</MobileLink>
-            <MobileLink href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Resumen</MobileLink>
-            <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.linkedin} target="_blank">
-              <FaLinkedin style={{ marginRight: '8px', verticalAlign: 'middle' }} /> LINKEDIN
-            </GitHubButton>
-          </MobileMenu>
-        }
       </NavbarContainer>
+      <NavMenu style={menuAnimation}>
+        <NavLink smooth to="/#home" onClick={() => setIsOpen(false)}>Inicio</NavLink>
+        <NavLink smooth to="/#skills" onClick={() => setIsOpen(false)}>Habilidades</NavLink>
+        <NavLink smooth to="/#projects" onClick={() => setIsOpen(false)}>Portfolio</NavLink>
+        <NavLink smooth to="/#experience" onClick={() => setIsOpen(false)}>Experiencia</NavLink>
+        <NavLink smooth to="/#education" onClick={() => setIsOpen(false)}>Educacion</NavLink>
+        <NavLink smooth to="/#contact" onClick={() => setIsOpen(false)}>Contacto</NavLink>
+      </NavMenu>
     </Nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

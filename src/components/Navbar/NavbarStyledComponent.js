@@ -1,6 +1,6 @@
-import { Link as LinkR } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled, { keyframes } from 'styled-components';
-import _default from '../../themes/default';
+import { animated } from '@react-spring/web';
 
 const floatAnimation = keyframes`
   0%, 100% {
@@ -11,32 +11,28 @@ const floatAnimation = keyframes`
   }
 `;
 
-export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    @media (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
+export const Nav = styled.nav`
+  background: ${({ theme }) => theme.card_light};
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
+
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  z-index: 1;
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(Link)`
     width: 90%;    
     padding: 0 6px;
     display: flex;
@@ -75,19 +71,21 @@ export const NavItems = styled.ul`
     }
 `;
 
-export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
-    }
-
-    &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primary};
-    }
+export const NavLink = styled(Link)`
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  &:hover {
+    color: orange;
+  }
+  @media (max-width: 1024px) { 
+    font-size: 2.0rem; 
+  }
 `;
 
 
@@ -126,20 +124,40 @@ export const ButtonContainer = styled.div`
   }
 `;
 
+export const NavMenu = styled(animated.div)`
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: ${({ theme }) => theme.card_light};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top;
+  overflow: hidden;
+  height: calc(100vh - 80px); 
+  z-index: 10;
+  will-change: transform, opacity; 
+`;
 
 export const MobileIcon = styled.div`
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
-  }
-`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: ${({ theme }) => theme.text_primary};
+`;
+
+export const MenuLabel = styled.span`
+  margin-left: 8px;
+  font-weight: 600;
+  text-transform: uppercase; 
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+
+`;
 
 export const MobileMenu = styled.div`
     display: flex;
@@ -159,7 +177,7 @@ export const MobileMenu = styled.div`
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
 
-`
+`;
 
 export const MobileMenuItems = styled.ul`
   display: flex;
@@ -170,14 +188,16 @@ export const MobileMenuItems = styled.ul`
   list-style: none;
   width: 100%;
   height: 100%;
-`
+  
+`;
 
-export const MobileMenuLink = styled(LinkR)`
+export const MobileMenuLink = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  text-transform: uppercase;
   :hover {
     color: ${({ theme }) => theme.primary};
   }
@@ -197,7 +217,7 @@ export const MobileMenuButton = styled.a`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
@@ -219,11 +239,11 @@ export  const MobileLink = styled.a`
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.text_secondary};
   }
 `;
 
-export const MobileNavLogo = styled(LinkR)`
+export const MobileNavLogo = styled(Link)`
   width: 80%;
   padding: 0 6px;
   display: flex;
