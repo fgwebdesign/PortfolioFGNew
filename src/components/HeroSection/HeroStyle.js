@@ -174,6 +174,12 @@ export const Span = styled.span`
   cursor: pointer;
   margin-top: 40px;
   margin-bottom: 40px;
+  @media (max-width: 640px) {
+    font-size: 30px;
+    line-height: 48px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
 `;
 
 export const SubTitle = styled.div`
