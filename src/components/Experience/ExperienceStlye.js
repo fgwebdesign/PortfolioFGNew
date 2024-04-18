@@ -10,7 +10,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 40px 0px 80px 0px;
     @media (max-width: 960px) {
-        padding: 0px;
+        padding-bottom: 20px;
     }
 `;
 
@@ -49,9 +49,7 @@ export const AnimatedImageTwo = styled(animated.img)`
   width: 370px; 
   height: auto;
   @media (max-width: 1024px) {
-    top:0.8%;
-    right: 0.8%;
-    width: 90px; 
+    display: none;
 `;
 
 export const AnimatedImageThree = styled(animated.img)`
@@ -61,9 +59,7 @@ export const AnimatedImageThree = styled(animated.img)`
   width: 370px; 
   height: auto;
   @media (max-width: 1024px) {
-    top:0.8%;
-    right: 0.8%;
-    width: 90px; 
+    display: none;
 `;
 
 export const LeftAnimatedImage = styled(AnimatedImage)`

@@ -8,18 +8,21 @@ import clientImageLeft from '../../images/idea.png';
 
 const Container = styled.div`
     background-color: transparent;
-   
+    margin-top: 120px;
+    margin-bottom: 120px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     @media (max-width: 1024px) { 
         padding: 100px 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 `;
 
 const TitleContainer = styled.div`
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     position: relative;
     display: flex;
     align-items: center;
@@ -50,17 +53,36 @@ margin: 40px 30px;
 `;
 
 const ContactButton = styled.a`
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 400;
-    transition: background-color 0.3s ease;
-    &:hover {
-        background-color: #FF7F50; 
-    }
+-webkit-appearance: button;
+-moz-appearance: button;
+appearance: button;
+text-decoration: none;
+width: 95%;
+max-width: 300px;
+text-align: center;
+padding: 16px 0;
+color:${({ theme }) => theme.white};
+border-radius: 20px;
+cursor: pointer;
+font-size: 20px;
+font-weight: 600;
+transition: all 0.2s ease-in-out !important;
+background: hsla(14, 100%, 50%, 1);
+background: linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(34, 100%, 50%, 1) 100%);
+background: -moz-linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(34, 100%, 50%, 1) 100%);
+background: -webkit-linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(34, 100%, 50%, 1) 100%);    
+box-shadow:  20px 20px 60px #1F2634,
+-20px -20px 60px #1F2634;
+&:hover {
+    transform: scale(1.05);
+transition: all 0.4s ease-in-out;
+box-shadow:  20px 20px 60px #1F2634,
+filter: brightness(1);
+}    
+@media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+} 
 `;
 
 const Title = styled.h3`
@@ -88,8 +110,8 @@ z-index: 2;
 
 const AnimatedImage = styled(animated.img)`
     position: absolute;
-    right: -10px; 
-    top: -270px; 
+    right: 5px; 
+    top: -310px; 
     width: 370px; 
     height: auto;
     z-index: 2; 
@@ -116,13 +138,14 @@ const Logo = styled.img`
     height: 100px;
     width: auto;
     background-color: transparent;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid #FF8C00;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-        transform: scale(1.08);
+        transform: scale(1.02);
         box-shadow: 0 8px 12px rgba(0,0,0,0.6);
     }
 `;
