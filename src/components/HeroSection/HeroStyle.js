@@ -165,6 +165,7 @@ export const TextLoop = styled.div`
     font-size: 22px;
     line-height: 48px;
     margin-bottom: 16px;
+    margin-top: 16px;
   }
 `;
 
@@ -172,6 +173,7 @@ export const Span = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
   margin-top: 40px;
+  margin-bottom: 40px;
 `;
 
 export const SubTitle = styled.div`
