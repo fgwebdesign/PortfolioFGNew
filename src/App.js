@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import LogoGrid from './components/LogoGrid'
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
@@ -38,6 +39,7 @@ function App() {
           <Wrapper>
           <Skills id="skills" />
           <Projects id="projects" openModal={openModal} setOpenModal={setOpenModal} />
+          <LogoGrid />
           <Experience id="experience" />
           </Wrapper>
           <Wrapper>

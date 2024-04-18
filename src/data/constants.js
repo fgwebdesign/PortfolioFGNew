@@ -27,6 +27,14 @@ import logotestflight from '../images/testflightlogo.png'
 import logotoggl from '../images/toggltracklogo.png'
 import logocmasmas from '../images/cmamalogo.png'
 import logoucontact from '../images/logoucontact.png'
+import logobyk from '../images/logobyk.png'
+import logoshotbyjeydi from '../images/logoshotbyjeydi.png'
+import logorbg from '../images/logorbg.png'
+import logoagribo from '../images/logoagribo.png'
+import logoseven from '../images/Logoseven.png'
+import logosabemar from '../images/logosabemar.png'
+import logodelarca from '../images/logodelarca.png'
+import logodronespng from '../images/logodrones.png'
 
 
 export const Bio = {
@@ -663,6 +671,15 @@ export const projects = [
     webapp: "https://breaking-bad-webapp.netlify.app",
   },
 ];
+
+export const clientLogos = [
+  { id: 1, name: 'B&K Arquitectos', image: logobyk },
+  { id: 2, name: 'Shot By Jeydi', image: logoshotbyjeydi },
+  { id: 3, name: 'RBG Estudio Juridico', image: logorbg },
+  { id: 4, name: 'Del Arca Producciones', image: logodelarca },
+  { id: 5, name: 'Del Arca Producciones', image: logodronespng },
+];
+
 
 export const TimeLineData = [
   { year: 2017, text: "Started my journey" },
