@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
+import logoImage from '../../images/logofgoriginal.png';
+
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -25,10 +25,10 @@ const FooterWrapper = styled.footer`
   color: ${({ theme }) => theme.text_primary};
 `;
 
-const Logo = styled.h1`
-  font-weight: 600;
-  font-size: 30px;
-  color: ${({ theme }) => theme.primary};
+const Logo = styled.img`
+  width: auto; 
+  height: 100px; 
+
 `;
 
 const Nav = styled.nav`
@@ -51,6 +51,7 @@ const Nav = styled.nav`
 const NavLink = styled.a`
 color: ${({ theme }) => theme.text_primary};
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
   &:hover {
@@ -82,13 +83,14 @@ const Copyright = styled.p`
   font-size: 0.9rem;
   color: ${({ theme }) => theme.soft2};
   text-align: center;
+  font-weight: 600;
 `;
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>FG WEB DESIGNS</Logo>
+      <Logo src={logoImage} alt="FG WEB DESIGNS" />
         <Nav>
           <NavLink href="#about">Inicio</NavLink>
           <NavLink href="#skills">Habilidades</NavLink>
