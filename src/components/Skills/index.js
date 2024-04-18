@@ -47,7 +47,8 @@ const Desc = styled.div`
   max-width: 600px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 15px;
+    padding: 10px;
   }
 `;
 

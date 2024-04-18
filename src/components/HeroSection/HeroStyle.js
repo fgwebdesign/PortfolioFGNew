@@ -228,7 +228,7 @@ export const ResumeButton = styled.a`
     filter: brightness(1);
     }    
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 24px 12px;
         font-size: 18px;
     } 
 `;
