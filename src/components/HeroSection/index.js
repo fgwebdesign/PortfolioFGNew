@@ -20,24 +20,22 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer>
                     <HeroLeftContainer>
-                        <animated.div style={titleProps}>
-                            <Title>BIENVENIDO<br /> <span id="bio-name">{Bio.name}</span></Title>
-                        </animated.div>
+                        <Title>BIENVENIDO<br /> <span id="bio-name">{Bio.name}</span></Title>
                         <TextLoop>
-                            <animated.div style={spanProps}>
-                                <Span>
-                                    <Typewriter
-                                        options={{
-                                            strings: Bio.roles,
-                                            autoStart: true,
-                                            loop: true,
-                                        }}
-                                    />
-                                </Span>
-                            </animated.div>
+
+                            <Span>
+                                <Typewriter
+                                    options={{
+                                        strings: Bio.roles,
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </Span>
+
                         </TextLoop>
                         <animated.div style={buttonProps}>
-                        <ResumeButton href={Bio.resume} target='display'>Descargar CV</ResumeButton>
+                            <ResumeButton href={Bio.resume} target='display'>Descargar CV</ResumeButton>
                         </animated.div>
                     </HeroLeftContainer>
                     <HeroRightContainer>

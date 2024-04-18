@@ -128,11 +128,6 @@ export const Title = styled.div`
     -webkit-text-fill-color: transparent;
     animation: gradient-animation 5s ease infinite;
   }
-  &:hover {
-    font-size: 55px;  
-    transform: translate(10px, -5px); 
-    color: orange;
-  }
 
   @keyframes gradient-animation {
     0% {
@@ -177,10 +172,6 @@ export const Span = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
   margin-top: 40px;
-  &:hover {
-    color: white;  
-    transform: scale(1.2); 
-  }
 `;
 
 export const SubTitle = styled.div`
