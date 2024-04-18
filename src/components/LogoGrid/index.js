@@ -157,14 +157,14 @@ const LogoGrid = () => {
                 <AnimatedImage style={props} src={clientImage} alt="Client Image" />
                 <Title>Clientes</Title>
             </TitleContainer>
-            <SubText>Estos son algunos de los clientes que han confiado en nosotros para llevar a cabo sus proyectos.</SubText>
+            <SubText>Estos son algunos de los clientes que han confiado en mi para llevar a cabo sus proyectos.</SubText>
             <LogoContainer>
                 {clientLogos.map(logo => (
                     <Logo key={logo.id} src={logo.image} alt={logo.name} />
                 ))}
             </LogoContainer>
             <CallToActionContainer>
-                <CallToActionText>¿Te gustaría compartir tu idea con nosotros?</CallToActionText>
+                <CallToActionText>¿Te gustaría compartir tu idea conmigo?</CallToActionText>
                 <ContactButton href="https://wa.me/59892033831">Ponte en contacto</ContactButton>
                 <LeftAnimatedImage style={leftProps} src={clientImageLeft} alt="Left Client Image" />
             </CallToActionContainer>

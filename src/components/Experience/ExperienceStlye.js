@@ -42,6 +42,30 @@ export const AnimatedImage = styled(animated.img)`
     width: 90px; 
 `;
 
+export const AnimatedImageTwo = styled(animated.img)`
+  position: absolute;
+  top: 30%; 
+  right: -60px; 
+  width: 370px; 
+  height: auto;
+  @media (max-width: 1024px) {
+    top:0.8%;
+    right: 0.8%;
+    width: 90px; 
+`;
+
+export const AnimatedImageThree = styled(animated.img)`
+  position: absolute;
+  top: 70%; 
+  right: -60px; 
+  width: 370px; 
+  height: auto;
+  @media (max-width: 1024px) {
+    top:0.8%;
+    right: 0.8%;
+    width: 90px; 
+`;
+
 export const LeftAnimatedImage = styled(AnimatedImage)`
   right: auto;  
   width: 160px; 

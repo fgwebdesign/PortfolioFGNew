@@ -10,10 +10,12 @@ import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constants';
 import { useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
-import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo } from './ExperienceStlye';
+import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo,AnimatedImageTwo, AnimatedImageThree } from './ExperienceStlye';
 import experienceImage from '../../images/timeline.png';  
 import leftImageExperience from '../../images/route.png';
 import leftImageExperienceTwo from '../../images/pc1.png';
+import rightImageExperience from '../../images/exp.png';
+import rightImageExperienceTwo from '../../images/nubes.png';
 
 
 
@@ -25,6 +27,15 @@ const Experience = () => {
     });
 
     const props = useSpring({
+        from: { transform: 'translateX(100%)', opacity: 0 },
+        to: {
+            transform: inView ? 'translateX(0%)' : 'translateX(100%)',
+            opacity: inView ? 1 : 0,
+        },
+        config: { tension: 20, friction: 10 },
+    });
+
+    const rightProps = useSpring({
         from: { transform: 'translateX(100%)', opacity: 0 },
         to: {
             transform: inView ? 'translateX(0%)' : 'translateX(100%)',
@@ -56,6 +67,8 @@ const Experience = () => {
             <Wrapper>
                 <Title ref={ref}>Experiencia</Title>
                 <AnimatedImage style={props} src={experienceImage} alt="Experience Image" />
+                <AnimatedImageTwo style={rightProps} src={rightImageExperience} alt="Experience Image" />
+                <AnimatedImageThree style={rightProps} src={rightImageExperienceTwo} alt="Experience Image" />
                 <LeftAnimatedImage style={leftProps} src={leftImageExperience} alt="Left Experience Image" />
                 <LeftAnimatedImageTwo style={leftPropsTwo} src={leftImageExperienceTwo} alt="Left Experience Image" />
                 <Desc>
