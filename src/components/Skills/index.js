@@ -121,30 +121,6 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
-const fadeInSlideIn = keyframes`
-  0% {
-    transform: translateX(-100%); /* O más, dependiendo de la distancia deseada */
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-`;
-
-const SideImage = styled.img`
-  position: absolute;
-  top: 30%;
-  left: 0.1%;
-  transform: translateY(-50%);
-  width: 220px;
-  height: auto;
-  animation: ${fadeInSlideIn} 4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
-  @media (max-width: 1024px) { 
-    display: none; 
-  }
-`;
 
 
 
@@ -156,6 +132,10 @@ const RightImage = styled(animated.img)`
   bottom: 10%;
   @media (max-width: 1024px) { 
     display: none; 
+  }
+  @media (min-width: 1024px) { 
+    width: 120px;
+    right: 1px;
   }
 `;
 
@@ -191,7 +171,6 @@ const Skills = () => {
 
   return (
     <Container id="skills" ref={ref}>
-      <SideImage src={toolsLeft} isVisible={inView} />
       <RightImage style={floating ? floatingProps : rocketProps} src={toolsRight} />
       <Wrapper>
         <Title>Habilidades</Title>

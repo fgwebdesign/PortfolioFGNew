@@ -113,7 +113,7 @@ export const LeftAnimatedImage = styled(AnimatedImage)`
   right: auto;  
   width: 230px; 
   left: 5%;
-  top: 70%;      
+  top: 72%;      
   @media (max-width: 1024px) {
     display: none;
 `;
