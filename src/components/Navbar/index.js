@@ -76,7 +76,7 @@ const Navbar = () => {
       <AnimatedLogo style={logoAnimation} src={handImage} alt="Sidebar Logo" />
       <AnimatedLogoRight style={logoAnimationRight} src={personImage} alt="Sidebar Logo" />
       <Logo src={logoImage} alt="Logo" />
-        <NavLink smooth to="/#home" onClick={() => setIsOpen(false)}>Inicio</NavLink>
+        <NavLink smooth to="/#about" onClick={() => setIsOpen(false)}>Inicio</NavLink>
         <NavLink smooth to="/#skills" onClick={() => setIsOpen(false)}>Habilidades</NavLink>
         <NavLink smooth to="/#projects" onClick={() => setIsOpen(false)}>Portfolio</NavLink>
         <NavLink smooth to="/#experience" onClick={() => setIsOpen(false)}>Experiencia</NavLink>
