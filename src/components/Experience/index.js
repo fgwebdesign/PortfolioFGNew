@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -10,8 +11,8 @@ import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constants';
 import { useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
-import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo,AnimatedImageTwo, AnimatedImageThree } from './ExperienceStlye';
-import experienceImage from '../../images/timeline.png';  
+import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo, AnimatedImageTwo, AnimatedImageThree } from './ExperienceStlye';
+import experienceImage from '../../images/timeline.png';
 import leftImageExperience from '../../images/route.png';
 import leftImageExperienceTwo from '../../images/pc1.png';
 import rightImageExperience from '../../images/exp.png';
@@ -21,6 +22,8 @@ import rightImageExperienceTwo from '../../images/nubes.png';
 
 
 const Experience = () => {
+    const { t } = useTranslation();
+
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5,
@@ -65,14 +68,14 @@ const Experience = () => {
     return (
         <Container id="experience">
             <Wrapper>
-                <Title ref={ref}>Experiencia</Title>
+                <Title ref={ref}>{t('experienceTitle')}</Title>
                 <AnimatedImage style={props} src={experienceImage} alt="Experience Image" />
                 <AnimatedImageTwo style={rightProps} src={rightImageExperience} alt="Experience Image" />
                 <AnimatedImageThree style={rightProps} src={rightImageExperienceTwo} alt="Experience Image" />
                 <LeftAnimatedImage style={leftProps} src={leftImageExperience} alt="Left Experience Image" />
                 <LeftAnimatedImageTwo style={leftPropsTwo} src={leftImageExperienceTwo} alt="Left Experience Image" />
                 <Desc>
-                    Aquí está mi recorrido trabajando en diversas empresas y proyectos.
+                    {t('experienceDescription')}
                 </Desc>
                 <TimelineSection>
                     <Timeline>

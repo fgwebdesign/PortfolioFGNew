@@ -1,5 +1,5 @@
-import React from 'react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider, AnimatedImage, AdditionalAnimatedImage } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
@@ -10,6 +10,7 @@ import additionalImage from '../../images/portfolio1.png';
 
 
 const Projects = ({ openModal, setOpenModal }) => {
+  const { t } = useTranslation();
   const [toggle, setToggle] = useState('all');
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
@@ -42,11 +43,11 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="projects">
       <Wrapper>
-        <Title ref={titleRef}>Portafolio</Title>
+        <Title ref={titleRef}>{t('portfolioTitle')}</Title>
         <AdditionalAnimatedImage ref={additionalRef} style={additionalImageProps} src={additionalImage} alt="Additional" />
         <AnimatedImage style={portfolioImageProps} src={portfolioImage} alt="Portafolio" />
         <Desc>
-          He trabajado en una amplia gama de proyectos web. Estos son algunos de mis proyectos.
+        {t('portfolioDescription')}
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
@@ -68,9 +69,9 @@ const Projects = ({ openModal, setOpenModal }) => {
           }
           <Divider />
           {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>CATÁLOGOS WEB</ToggleButton>
+            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>WEB CATALOGUE</ToggleButton>
             :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>CATÁLOGOS WEB</ToggleButton>
+            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>WEB CATALOGUE</ToggleButton>
           }
         </ToggleButtonGroup>
         <CardContainer>

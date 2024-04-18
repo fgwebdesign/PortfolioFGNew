@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from '@react-spring/web';
+import { useTranslation } from 'react-i18next';
 import HeroBgAnimation from '../HeroBgAnimation';
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle, SocialMediaIcons, SocialMediaIcon, ResumeButton } from './HeroStyle';
 import HeroImg from '../../images/logofg.png';
@@ -7,6 +8,7 @@ import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 
 const HeroSection = () => {
+    const { t } = useTranslation();
     const titleProps = useSpring({ to: { opacity: 1, transform: 'translateY(0)' }, from: { opacity: 0, transform: 'translateY(-30px)' }, delay: 300 });
     const logoProps = useSpring({ to: { opacity: 1, transform: 'translateY(0)' }, from: { opacity: 0, transform: 'translateY(-40px)' }, delay: 300 });
     const spanProps = useSpring({ to: { opacity: 1, transform: 'translateX(0)' }, from: { opacity: 0, transform: 'translateX(-40px)' }, delay: 300 });
@@ -20,7 +22,7 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer>
                     <HeroLeftContainer>
-                        <Title>BIENVENIDO<br /> <span id="bio-name">{Bio.name}</span></Title>
+                        <Title>{t('welcome')}<br /> <span id="bio-name">{t('bioName')}</span></Title>
                         <TextLoop>
 
                             <Span>
@@ -35,7 +37,7 @@ const HeroSection = () => {
 
                         </TextLoop>
                         <animated.div style={buttonProps}>
-                            <ResumeButton href={Bio.resume} target='display'>Descargar CV</ResumeButton>
+                        <ResumeButton href={Bio.resume} target='display'>{t('resumeButton')}</ResumeButton>
                         </animated.div>
                     </HeroLeftContainer>
                     <HeroRightContainer>

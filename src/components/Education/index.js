@@ -1,5 +1,5 @@
-
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -18,6 +18,7 @@ import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAn
 
 
 const Education = () => {
+    const { t } = useTranslation();
 
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -36,11 +37,11 @@ const Education = () => {
     return (
         <Container id="education">
             <Wrapper>
-              <Title ref={ref}>Educación</Title>
-              <AnimatedImage style={props} src={rightImageEducation} alt="Experience Image" />
-              <LeftAnimatedImage style={props} src={leftImageEducation} alt="Experience Image" />
+                <Title ref={ref}>{t('educationTitle')}</Title>
+                <AnimatedImage style={props} src={rightImageEducation} alt="Experience Image" />
+                <LeftAnimatedImage style={props} src={leftImageEducation} alt="Experience Image" />
                 <Desc>
-                    Mi educación ha sido un  autodescubrimiento y crecimiento, les dejo aqui mis certificaciones y aprendizajes más recientes.
+                    {t('educationDescription')}
                 </Desc>
                 <TimelineSection>
                     <Timeline>

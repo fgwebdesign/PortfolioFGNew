@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import { clientLogos } from '../../data/constants';
 import clientImage from '../../images/clients.png';
 import clientImageLeft from '../../images/idea.png';
+
 
 const Container = styled.div`
     background-color: transparent;
@@ -151,6 +153,8 @@ const Logo = styled.img`
 `;
 
 const LogoGrid = () => {
+    const { t } = useTranslation();
+
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5,
@@ -178,17 +182,17 @@ const LogoGrid = () => {
         <Container>
             <TitleContainer ref={ref}>
                 <AnimatedImage style={props} src={clientImage} alt="Client Image" />
-                <Title>Clientes</Title>
+                <Title>{t('clientsTitle')}</Title>
             </TitleContainer>
-            <SubText>Estos son algunos de los clientes que han confiado en mi para llevar a cabo sus proyectos.</SubText>
+            <SubText>{t('clientsDescription')}</SubText>
             <LogoContainer>
                 {clientLogos.map(logo => (
                     <Logo key={logo.id} src={logo.image} alt={logo.name} />
                 ))}
             </LogoContainer>
             <CallToActionContainer>
-                <CallToActionText>¿Te gustaría compartir tu idea conmigo?</CallToActionText>
-                <ContactButton href="https://wa.me/59892033831">Ponte en contacto</ContactButton>
+                <CallToActionText>{t('clientsText')}</CallToActionText>
+                <ContactButton href="https://wa.me/59892033831">{t('clientsButton')}</ContactButton>
                 <LeftAnimatedImage style={leftProps} src={clientImageLeft} alt="Left Client Image" />
             </CallToActionContainer>
         </Container>

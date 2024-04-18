@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import { useTranslation } from 'react-i18next';
+import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from '@react-spring/web';
 import { skills } from '../../data/constants';
-import toolsLeft from '../../images/tools2.png';
 import toolsRight from '../../images/rocket.png';
 
 const Container = styled.div`
@@ -140,13 +140,13 @@ const RightImage = styled(animated.img)`
 `;
 
 const Skills = () => {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
   const [floating, setFloating] = useState(false);
-
   const rocketProps = useSpring({
     from: { transform: 'translateY(100vh)', opacity: 0 },
     to: {
@@ -173,8 +173,8 @@ const Skills = () => {
     <Container id="skills" ref={ref}>
       <RightImage style={floating ? floatingProps : rocketProps} src={toolsRight} />
       <Wrapper>
-        <Title>Habilidades</Title>
-        <Desc>Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años.</Desc>
+        <Title>{t('skillsTitle')}</Title>
+        <Desc>{t('skillsDescription')}</Desc>
         <SkillsContainer>
           {skills.map((skill) => (
             <Skill key={skill.id}>

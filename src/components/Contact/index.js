@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
@@ -9,22 +10,9 @@ import leftImageEducation from '../../images/contact.png';
 import rightImageEducation from '../../images/contact2.png';
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Contact = () => {
+  const { t } = useTranslation();
 
-  //hooks
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
@@ -58,17 +46,17 @@ const props = useSpring({
   return (
     <Container id='contact'>
       <Wrapper>
-        <Title>Hablemos de futuros proyectos..</Title>
-        <Desc ref={ref}>Estoy aquí para ayudarte, No dudes en enviarme cualquier pregunta o propuesta.</Desc>
+        <Title>{t('contactTitle')}</Title>
+        <Desc ref={ref}>{t('contactDescription')}</Desc>
         <AnimatedImage style={props} src={rightImageEducation} alt="Experience Image" />
               <LeftAnimatedImage style={props} src={leftImageEducation} alt="Experience Image" />
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>¡Envíame un e-mail! 🚀📧</ContactTitle>
-          <ContactInput placeholder="Tu correo electrónico" name="from_email" />
-          <ContactInput placeholder="Tu nombre completo" name="from_name" />
-          <ContactInput placeholder="Asunto" name="subject" />
-          <ContactInputMessage placeholder="Mensaje" rows="4" name="message" />
-          <ContactButton type="submit" value="Enviar" />
+          <ContactTitle>{t('contactMail')}</ContactTitle>
+          <ContactInput placeholder={t('contactMailTwo')} name="from_email" />
+          <ContactInput placeholder={t('contactName')} name="from_name" />
+          <ContactInput placeholder={t('contactSubject')} name="subject" />
+          <ContactInputMessage placeholder={t('contactMessage')}  rows="4" name="message" />
+          <ContactButton type="submit" value={t('contactSend')} />
         </ContactForm>
         <Snackbar
           open={open}
