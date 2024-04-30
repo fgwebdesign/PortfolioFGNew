@@ -1,4 +1,3 @@
-// src/components/Translate/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -23,6 +22,8 @@ i18n
           "experienceTitle": "Experience",
           "experienceDescription": "Here is my journey working in various companies and projects.",
           "contactTitle": "Let's talk about future projects..",
+          "faqsTitle": "FAQS (Frequently Asked Questions)",
+          "faqsDescription": "FAQS (Frequently Asked Questions)",
           "contactDescription": "I am here to help you, feel free to send me any questions or proposals.",
           "contactMail": "Send me an email! 🚀📧",
           "contactMailTwo": "Your email",
@@ -33,6 +34,7 @@ i18n
           "clientsTitle": "Customers",
           "clientsDescription": "These are some of the clients who have trusted me to carry out their projects.",
           "clientsText": "Would you like to share your idea with me?",
+          "faqsText": "Do you have another question?",
           "clientsButton": "Get in touch with me",
           "portfolioTitle": "Portfolio",
           "portfolioDescription": "I have worked on a wide range of web projects. These are some of my projects.",
@@ -56,6 +58,9 @@ i18n
           "experienceTitle": "Experiencia",
           "experienceDescription": "Aquí está mi recorrido trabajando en diversas empresas y proyectos.",
           "contactTitle": "Hablemos de futuros proyectos..",
+          "faqsTitle": "FAQS (Preguntas Frecuentes)",
+          "faqsDescription": "FAQS (Frequently Asked Questions)",
+          "faqsText": "¿Tienes alguna otra pregunta?",
           "contactDescription": "Estoy aquí para ayudarte, sientete libre en enviarme alguna consulta o propuesta.",
           "contactMail": "¡Envíame un e-mail! 🚀📧",
           "contactMailTwo": "Tu correo electrónico",

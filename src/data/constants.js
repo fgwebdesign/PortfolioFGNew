@@ -30,11 +30,9 @@ import logoucontact from '../images/logoucontact.png'
 import logobyk from '../images/logobyk.png'
 import logoshotbyjeydi from '../images/logoshotbyjeydi.png'
 import logorbg from '../images/logorbg.png'
-import logoagribo from '../images/logoagribo.png'
-import logoseven from '../images/Logoseven.png'
-import logosabemar from '../images/logosabemar.png'
 import logodelarca from '../images/logodelarca.png'
 import logodronespng from '../images/logodrones.png'
+import logoelementor from '../images/elementor.png'
 
 
 export const Bio = {
@@ -100,6 +98,10 @@ export const skills = [
       {
         name: "TailWind",
         image: logotailwind,
+      },
+      {
+        name: "Elementor Pro",
+        image: logoelementor,
       },
     ],
   },
@@ -272,18 +274,19 @@ export const experiences = [
   {
     id: 0,
     img: logoucontact,
-    role: "Quality Assurance Manual/Automation - Employed",
+    role: "Software Quality Assurance Engineer - Employed",
     company: "Ucontact by net2phone",
     date: "2024 - actual",
-    desc: "Actualmente formo parte del equipo de QA para la empresa Ucontact by net2phone. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
+    desc: "Actualmente me encuentro trabajando como Software Quality Assurance Engineer en la empresa Ucontact by net2phone, encargado de la creación y ejecución de casos de prueba, reporte de errores y áreas de mejora. Además, soy responsable de la automatización de pruebas y la integración de herramientas de QA en el flujo de trabajo de desarrollo.",
     skills: [
-      "JIRA",
-      "Figma",
-      "Zephyr",
       "GitHub",
-      "BrowserStack",
-      "Slack",
+      "SalesForce",
+      "Javascript",
+      "Visual Studio Code",
+      "Termius",
+      "Postman",
       "Confluence",
+      "MySQL Workbench",
     ],
   },
   {
