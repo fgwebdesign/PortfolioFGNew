@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import _default from '../../themes/default';
 import { animated } from '@react-spring/web';
 
 export const Container = styled.div`

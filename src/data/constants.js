@@ -1,12 +1,12 @@
 import bykimage from '../images/1.png';
 import agriboimage from '../images/agribo.png';
 import delarcaimage from '../images/delarca.png';
-import shotbyjeydiimage from '../images/shotbyjeydi.png';
+import shotbyjeydiimage from '../images/jeydi.png';
 import monionegroimage from '../images/monionegro.png';
 import dukoimage from '../images/duki.png';
 import sabemarimage from '../images/sabemar.png';
 import sevenimage from '../images/sevencontainers.png';
-import picanteimage from '../images/picantejerseys.png';
+import picanteimage from '../images/picante.png';
 import logofg from '../images/logofg.png'
 import logoces from '../images/logoces.png'
 import logoasana from '../images/asanalogo.png'
@@ -33,6 +33,9 @@ import logorbg from '../images/logorbg.png'
 import logodelarca from '../images/logodelarca.png'
 import logodronespng from '../images/logodrones.png'
 import logoelementor from '../images/elementor.png'
+import logophp from '../images/php.png'
+import luzuy from '../images/luzuy.png'
+import startqa from  '../images/startqa.png'
 
 
 export const Bio = {
@@ -191,6 +194,10 @@ export const skills = [
       {
         name: "JAVA",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+      },
+      {
+        name: "PHP",
+        image: logophp,
       },
     ],
   },
@@ -542,22 +549,52 @@ export const education = [
 
 export const projects = [
   {
-    id: 9,
+    id: 1,
+    title: "Luz Uy Importaciones",
+    date: "2024",
+    image: luzuy,
+    tags: [
+      "HTML",
+      "CSS",
+      "Wordpress",
+      "Elementor",
+    ],
+    category: "android app",
+    github: "https://github.com/rishavchanda/Breaking-Bad",
+    webapp: "https://breaking-bad-webapp.netlify.app",
+  },
+  {
+    id: 2,
     title: "Picante Jerseys",
-    date: "2023",
+    date: "2024",
     image: picanteimage,
     tags: [
       "HTML",
       "CSS",
-      "JSS",
-      "SCSS",
+      "Wordpress",
+      "Elementor",
     ],
-    category: "web app",
+    category: "android app",
     github: "https://github.com/rishavchanda/Trackify",
     webapp: "https://trackify.duckdns.org",
   },
   {
-    id: 9,
+    id: 3,
+    title: "StartQA",
+    date: "2024",
+    image: startqa,
+    tags: [
+      "HTML",
+      "CSS",
+      "JS",
+      "Boostrap",
+    ],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Breaking-Bad",
+    webapp: "https://breaking-bad-webapp.netlify.app",
+  },
+  {
+    id: 3,
     title: "B & K Arquitectos",
     date: "2023",
     image: bykimage,
@@ -572,7 +609,7 @@ export const projects = [
     webapp: "https://trackify.duckdns.org",
   },
   {
-    id: 1,
+    id: 4,
     title: "Shot By Jeydi",
     date: "2023",
     image: shotbyjeydiimage,
@@ -587,7 +624,7 @@ export const projects = [
     webapp: "https://vexa-app.netlify.app/",
   },
   {
-    id: 0,
+    id: 5,
     title: "Del Arca Producciones",
     date: "2023",
     image: delarcaimage,
@@ -602,7 +639,7 @@ export const projects = [
     webapp: "https://podstream.netlify.app/",
   },
   {
-    id: 2,
+    id: 6,
     title: "Moño Negro Catering",
     date: "2023",
     image: monionegroimage,
@@ -617,7 +654,7 @@ export const projects = [
     webapp: "https://brain-tumor.netlify.app/",
   },
   {
-    id: 3,
+    id: 7,
     title: "Drones orientales",
     date: "2023",
     image: logodrones,
@@ -628,12 +665,12 @@ export const projects = [
       "SCSS",
       "Wordpress"
     ],
-    category: "android app",
+    category: "web app",
     github: "https://github.com/rishavchanda/Buckoid-Android-App",
     webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
   },
   {
-    id: 10,
+    id: 8,
     title: "Re-branding Duki Website",
     date: "2023",
     image: dukoimage,
@@ -649,7 +686,7 @@ export const projects = [
     webapp: "https://github.com/rishavchanda/Job-finder-App",
   },
   {
-    id: 4,
+    id: 9,
     title: "Sabemar Turismo",
     date: "2022",
     image: sabemarimage,
@@ -664,7 +701,7 @@ export const projects = [
     webapp: "https://whatsapp-clone-rishav.web.app",
   },
   {
-    id: 5,
+    id: 10,
     title: "Agribo Software",
     date: "2021",
     image: agriboimage,
@@ -679,7 +716,7 @@ export const projects = [
     webapp: "https://rishav-react-todo.netlify.app/",
   },
   {
-    id: 6,
+    id: 11,
     title: "Seven Containers",
     date: "2021",
     image: sevenimage,
@@ -693,6 +730,7 @@ export const projects = [
     github: "https://github.com/rishavchanda/Breaking-Bad",
     webapp: "https://breaking-bad-webapp.netlify.app",
   },
+
 ];
 
 export const clientLogos = [
