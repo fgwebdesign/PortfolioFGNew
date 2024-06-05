@@ -8,8 +8,8 @@ import logoImage from '../../images/logofgoriginal.png';
 import handImage from '../../images/hand.png';
 import personImage from '../../images/person1.png';
 import Switch from "react-switch";
-import flagES from '../../images/spainflag.png';
-import flagUS from '../../images/usaflag.png';
+import flagES from '../../images/logospain.png';
+import flagUS from '../../images/logousa.png';
 
 
 const LanguageToggleContainer = styled.div`
@@ -106,8 +106,8 @@ const Navbar = () => {
         </MobileIcon>
         <LanguageToggleContainer>
           <FlagIcon onClick={() => i18n.changeLanguage('es')}>
-            <img src={flagES} alt="Español" style={{ width: '30px', marginRight: '8px' }} />
-            <span style={{ margin: '0 10px', fontSize: '18px', color: 'white', fontWeight: '500' }}>ES</span>
+            <img src={flagES} alt="Español" style={{ width: '30px', marginRight: '3px' }} />
+            <span style={{ margin: '0 5px', fontSize: '18px', color: 'white', fontWeight: '500' }}>ES</span>
           </FlagIcon>
           <Switch
             onChange={handleLanguageSwitch}
@@ -123,8 +123,9 @@ const Navbar = () => {
             width={40}
           />
           <FlagIcon onClick={() => i18n.changeLanguage('en')}>
-            <img src={flagUS} alt="English" style={{ width: '30px', marginRight: '8px' }} />
-            <span style={{ margin: '0 10px', fontSize: '18px', color: 'white', fontWeight: '500' }}>US</span>
+            <span style={{ margin: '0 5px', fontSize: '18px', color: 'white', fontWeight: '500' }}>US</span>
+            <img src={flagUS} alt="English" style={{ width: '30px', marginLeft: '3px' }} />
+
           </FlagIcon>
 
         </LanguageToggleContainer>

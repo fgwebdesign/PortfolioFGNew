@@ -52,6 +52,26 @@ export const Bio = {
   insta: "https://www.instagram.com/fgwebdesign_/",
 };
 
+export const FAQData = [
+  {
+    id: 1,
+    question: '¿Cómo puedo contactar con soporte?',
+    answer: 'Puedes contactarnos mediante el formulario en nuestra página de contacto o enviando un correo directamente a soporte@ejemplo.com.'
+  },
+  {
+    id: 2,
+    question: '¿Cuál es el horario de atención al cliente?',
+    answer: 'Nuestro horario de atención al cliente es de lunes a viernes, de 9:00 a 18:00 horas.'
+  },
+  {
+    id: 3,
+    question: '¿Dónde puedo encontrar más información sobre los productos?',
+    answer: 'Toda la información sobre nuestros productos se encuentra disponible en la sección de productos de nuestro sitio web.'
+  },
+  // Puedes agregar más FAQs según necesites
+];
+
+
 export const skills = [
   {
     title: "Front End",

@@ -12,7 +12,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-import LogoGrid from './components/LogoGrid'
+import LogoGrid from './components/LogoGrid';
+import FrequentlyAsks from './components/FrequentlyAsks';
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
@@ -31,20 +32,21 @@ function App() {
   const [darkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
         <Navbar />
         <Body>
-        <HeroSection id="home" />
+          <HeroSection id="home" />
           <Wrapper>
-          <Skills id="skills" />
-          <Projects id="projects" openModal={openModal} setOpenModal={setOpenModal} />
-          <LogoGrid />
-          <Experience id="experience" />
+            <Skills id="skills" />
+            <Projects id="projects" openModal={openModal} setOpenModal={setOpenModal} />
+            <LogoGrid />
+            <Experience id="experience" />
           </Wrapper>
+          <FrequentlyAsks id="faqs" />
           <Wrapper>
-          <Education id="education" />
-          <Contact id="contact" />
+            <Education id="education" />
+            <Contact id="contact" />
           </Wrapper>
           <Footer />
           {openModal.state &&
