@@ -13,7 +13,6 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import LogoGrid from './components/LogoGrid';
-import FrequentlyAsks from './components/FrequentlyAsks';
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
@@ -43,7 +42,6 @@ function App() {
             <LogoGrid />
             <Experience id="experience" />
           </Wrapper>
-          <FrequentlyAsks id="faqs" />
           <Wrapper>
             <Education id="education" />
             <Contact id="contact" />

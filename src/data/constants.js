@@ -6,7 +6,7 @@ import monionegroimage from '../images/monionegro.png';
 import dukoimage from '../images/duki.png';
 import sabemarimage from '../images/sabemar.png';
 import sevenimage from '../images/sevencontainers.png';
-import picanteimage from '../images/picante.png';
+import picanteimage from '../images/picantejerseys.png';
 import logofg from '../images/logofg.png'
 import logoces from '../images/logoces.png'
 import logoasana from '../images/asanalogo.png'
@@ -36,6 +36,8 @@ import logoelementor from '../images/elementor.png'
 import logophp from '../images/php.png'
 import luzuy from '../images/luzuy.png'
 import startqa from  '../images/startqa.png'
+import castelier from '../images/castelier.png'
+import rbgestudio from '../images/rbgestudio.png'
 
 
 export const Bio = {
@@ -549,6 +551,19 @@ export const education = [
 
 export const projects = [
   {
+    id: 0,
+    title: "Castelier Bienes Raíces",
+    date: "2024",
+    image: castelier,
+    tags: [
+      "HTML",
+      "CSS",
+      "Wordpress",
+      "Elementor",
+    ],
+    category: "android app",
+  },
+  {
     id: 1,
     title: "Luz Uy Importaciones",
     date: "2024",
@@ -560,8 +575,18 @@ export const projects = [
       "Elementor",
     ],
     category: "android app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
+  },
+  {
+    id: 1,
+    title: "RBG Estudio Jurídico",
+    date: "2024",
+    image: rbgestudio,
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+    ],
+    category: "android app",
   },
   {
     id: 2,
@@ -575,8 +600,6 @@ export const projects = [
       "Elementor",
     ],
     category: "android app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
   },
   {
     id: 3,
@@ -590,8 +613,6 @@ export const projects = [
       "Boostrap",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
   },
   {
     id: 3,
@@ -605,8 +626,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify.duckdns.org",
   },
   {
     id: 4,
@@ -620,8 +639,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
   },
   {
     id: 5,
@@ -635,8 +652,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
   },
   {
     id: 6,
@@ -650,8 +665,6 @@ export const projects = [
       "SCSS",
     ],
     category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-    webapp: "https://brain-tumor.netlify.app/",
   },
   {
     id: 7,
@@ -663,11 +676,8 @@ export const projects = [
       "CSS",
       "JSS",
       "SCSS",
-      "Wordpress"
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
   },
   {
     id: 8,
@@ -679,11 +689,8 @@ export const projects = [
       "CSS",
       "JS",
       "React Js",
-      "Firebase"
     ],
     category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
   },
   {
     id: 9,
@@ -697,8 +704,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
   },
   {
     id: 10,
@@ -712,8 +717,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Todo-Web-App",
-    webapp: "https://rishav-react-todo.netlify.app/",
   },
   {
     id: 11,
@@ -727,8 +730,6 @@ export const projects = [
       "SCSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
   },
 
 ];
