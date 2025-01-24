@@ -87,10 +87,12 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <FooterContainer>
       <FooterWrapper>
-      <Logo src={logoImage} alt="FG WEB DESIGNS" />
+        <Logo src={logoImage} alt="FG WEB DESIGNS" />
         <Nav>
           <NavLink href="#about">Inicio</NavLink>
           <NavLink href="#skills">Habilidades</NavLink>
@@ -103,9 +105,8 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 FG WEB DESIGNS. Todos los derechos reservados.
+          &copy; {currentYear} FG WEB DESIGNS. Todos los derechos reservados.
         </Copyright>
-
       </FooterWrapper>
     </FooterContainer>
   );

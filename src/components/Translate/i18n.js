@@ -38,7 +38,9 @@ i18n
           "clientsButton": "Get in touch with me",
           "portfolioTitle": "Portfolio",
           "portfolioDescription": "I have worked on a wide range of web projects. These are some of my projects.",
-          "skillsDescription": "Here are some of the skills and tools I have been working with over the past few years."
+          "skillsDescription": "Here are some of the skills and tools I have been working with over the past few years.",
+          "contactSuccess": "¡Mensaje enviado correctamente! Me pondré en contacto contigo pronto.",
+          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente."
         }
       },
       es: {
@@ -74,7 +76,9 @@ i18n
           "clientsButton": "Ponte en contacto",
           "portfolioTitle": "Portafolio",
           "portfolioDescription": "He trabajado en una amplia gama de proyectos web. Estos son algunos de mis proyectos.",
-          "skillsDescription": "Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años."
+          "skillsDescription": "Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años.",
+          "contactSuccess": "¡Mensaje enviado correctamente! Me pondré en contacto contigo pronto.",
+          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente."
         }
       }
     },

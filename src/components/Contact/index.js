@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
+import { Snackbar, Alert } from '@mui/material';
 import { Container, Wrapper, Title, Desc, ContactForm, ContactTitle, ContactInput, ContactButton, ContactInputMessage, AnimatedImage, LeftAnimatedImage } from './ContactStyle';
 import { useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
@@ -12,20 +12,41 @@ import rightImageEducation from '../../images/contact2.png';
 
 const Contact = () => {
   const { t } = useTranslation();
-
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ message: '', type: 'success' });
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    setLoading(true);
+    
+    emailjs.sendForm(
+      'service_l4w379i',
+      'template_hih3gu6',
+      form.current,
+      'l1r_IQu-Z6h_QnloI'
+    )
       .then((result) => {
+        setStatus({
+          message: t('contactSuccess') || '¡Mensaje enviado correctamente!',
+          type: 'success'
+        });
         setOpen(true);
         form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setStatus({
+          message: t('contactError') || 'Error al enviar el mensaje. Por favor, intenta nuevamente.',
+          type: 'error'
+        });
+        setOpen(true);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-  }
+  };
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -49,22 +70,51 @@ const props = useSpring({
         <Title>{t('contactTitle')}</Title>
         <Desc ref={ref}>{t('contactDescription')}</Desc>
         <AnimatedImage style={props} src={rightImageEducation} alt="Experience Image" />
-              <LeftAnimatedImage style={props} src={leftImageEducation} alt="Experience Image" />
+        <LeftAnimatedImage style={props} src={leftImageEducation} alt="Experience Image" />
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>{t('contactMail')}</ContactTitle>
-          <ContactInput placeholder={t('contactMailTwo')} name="from_email" />
-          <ContactInput placeholder={t('contactName')} name="from_name" />
-          <ContactInput placeholder={t('contactSubject')} name="subject" />
-          <ContactInputMessage placeholder={t('contactMessage')}  rows="4" name="message" />
-          <ContactButton type="submit" value={t('contactSend')} />
+          <ContactInput 
+            placeholder={t('contactMailTwo')} 
+            name="from_email" 
+            type="email" 
+            required 
+          />
+          <ContactInput 
+            placeholder={t('contactName')} 
+            name="from_name" 
+            required 
+          />
+          <ContactInput 
+            placeholder={t('contactSubject')} 
+            name="subject" 
+            required 
+          />
+          <ContactInputMessage 
+            placeholder={t('contactMessage')}  
+            rows="4" 
+            name="message" 
+            required 
+          />
+          <ContactButton 
+            type="submit" 
+            value={loading ? 'Enviando...' : t('contactSend')}
+            disabled={loading}
+          />
         </ContactForm>
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Mensaje enviado correctamente!"
-          severity="success"
-        />
+          onClose={() => setOpen(false)}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert 
+            onClose={() => setOpen(false)} 
+            severity={status.type}
+            sx={{ width: '100%' }}
+          >
+            {status.message}
+          </Alert>
+        </Snackbar>
       </Wrapper>
     </Container>
   )

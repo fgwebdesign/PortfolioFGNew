@@ -78,20 +78,35 @@ padding: 12px 16px;
 `;
 
 export const ContactButton = styled.input`
-width: 100%;
-text-decoration: none;
-text-align: center;
-background: hsla(14, 100%, 50%, 1);
-background: linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(24, 100%, 50%, 1) 100%);
-background: -moz-linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(24, 100%, 50%, 1) 100%);
-background: -webkit-linear-gradient(225deg, hsla(14, 100%, 50%, 1) 0%, hsla(24, 100%, 50%, 1) 100%);
-padding: 13px 16px;
-margin-top: 2px;
-border-radius: 12px;
-border: none;
-color: ${({ theme }) => theme.text_primary};
-font-size: 18px;
-font-weight: 600;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  background: ${({ theme }) => theme.primary};
+  padding: 13px 16px;
+  margin-top: 2px;
+  border-radius: 12px;
+  border: none;
+  color: ${({ theme }) => theme.white};
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+  }
+    
+  &:disabled {
+    background: ${({ theme }) => theme.text_secondary};
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 16px;
+  } 
 `;
 
 
