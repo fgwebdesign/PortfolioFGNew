@@ -37,31 +37,43 @@ const Button = styled.button`
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
   const [play, { stop }] = useSound(boopSfx, { volume: 0.7 });
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100 && !isOpen) {
+      if (window.scrollY > 100 && !isOpen && !hasPlayed) {
         setIsOpen(true);
-        play(); 
+        play();
+        setHasPlayed(true);
       }
     };
 
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isOpen, play]);
+  }, [isOpen, play, hasPlayed]);
+
+  const handleClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+      if (!hasPlayed) {
+        play();
+        setHasPlayed(true);
+      }
+    }
+  };
 
   return (
-      <ButtonContainer>
-          <Button onClick={() => {
-              setIsOpen(true);
-              play();
-          }}>
-              <img src={logoWpp} alt="WhatsApp" style={{ width: '80%', height: '80%' }} />
-          </Button>
-          {isOpen && <WhatsAppModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
-      </ButtonContainer>
+    <ButtonContainer>
+      <Button onClick={handleClick}>
+        <img src={logoWpp} alt="WhatsApp" style={{ width: '80%', height: '80%' }} />
+      </Button>
+      {isOpen && <WhatsAppModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+    </ButtonContainer>
   );
 };
 
