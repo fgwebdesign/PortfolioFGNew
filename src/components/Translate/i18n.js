@@ -40,7 +40,17 @@ i18n
           "portfolioDescription": "I have worked on a wide range of web projects. These are some of my projects.",
           "skillsDescription": "Here are some of the skills and tools I have been working with over the past few years.",
           "contactSuccess": "¡Mensaje enviado correctamente! Me pondré en contacto contigo pronto.",
-          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente."
+          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente.",
+          "experience_fgwebdesigns": "Specialized in managing custom website design and development, including E-Commerce, landings and corporate sites.",
+          "experience_practia": "I am working as a contractor for Practia company, in charge of frontend feature development using technologies such as React Js, Next Js, Tailwind CSS, among others.",
+          "experience_ucontact": "Currently working as a Software Quality Assurance Engineer at Ucontact by net2phone, responsible for creating and executing test cases, reporting bugs and areas for improvement. Additionally, I am responsible for test automation and integration of QA tools into the development workflow.",
+          "experience_nareia": "I was part of the QA team for the 'MiDinero' mobile application, specifically in the role of Functional Tester. My responsibilities included identifying and reporting bugs and areas for improvement, developing test cases and user stories, as well as executing regression tests in various development environments.",
+          "experience_startqa_1": "Confidential Information - Kotlin Automation Project for a US client.",
+          "experience_startqa_2": "Confidential Information - Automation and Manual Project providing services to companies like Okta, Auth0, Azure, in charge of quality control and test case automation in Cypress.",
+          "experience_startqa_3": "Confidential Information - Virtual wallet project - expense manager Automation and Manual in Cypress for a US client.",
+          "experience_startqa_4": "Confidential Information - Virtual wallet project - expense manager Automation and Manual in Cypress for a US client.",
+          "experience_ecommerce": "Front-End Developer for company clients such as: Zapateria TOTO, WATCHME, Carter's, among others. E-commerce site layout designer, in charge of marketing and social media.",
+          "experience_cellpay": "Web designer of the company's page, also in charge of marketing and advertising."
         }
       },
       es: {
@@ -78,7 +88,14 @@ i18n
           "portfolioDescription": "He trabajado en una amplia gama de proyectos web. Estos son algunos de mis proyectos.",
           "skillsDescription": "Estas son algunas de mis habilidades y herramientas con las que he estado trabajando y utilizando durante los últimos años.",
           "contactSuccess": "¡Mensaje enviado correctamente! Me pondré en contacto contigo pronto.",
-          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente."
+          "contactError": "Error al enviar el mensaje. Por favor, intenta nuevamente.",
+          "experience_fgwebdesigns": "Especializado en la gestión de diseño y desarrollo de páginas web a medida, incluyendo E-Commerce, landings y sitios corporativos.",
+          "experience_practiauruguay": "Estoy trabajando en modalidad contractor para la empresa Practia, encargado de la realizacion de features frontend con tecnologias como React Js, Next Js, Tailwind CSS, entre otras.",
+          "experience_ucontactbynet2phone": "Actualmente me encuentro trabajando como Software Quality Assurance Engineer en la empresa Ucontact by net2phone, encargado de la creación y ejecución de casos de prueba, reporte de errores y áreas de mejora. Además, soy responsable de la automatización de pruebas y la integración de herramientas de QA en el flujo de trabajo de desarrollo.",
+          "experience_nareiasoftware": "Formé parte del equipo de QA para la aplicación mobile 'MiDinero', específicamente en el rol de Tester Funcional. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
+          "experience_startqa": "Información Confidencial - Proyecto de Automation en Kotlin para un cliente en Estados Unidos.",
+          "experience_ecommercefull": "Desarollador Front-End para los clientes de la empresa como: Zapateria TOTO, WATCHME, Carter's, entre otros. Maquetador de sitios e-commerce, encargado del área de marketing y redes sociales.",
+          "experience_cellpaydirectvagente": "Diseñador web de la página de la empresa, también encargado del área de marketing y publicidad."
         }
       }
     },

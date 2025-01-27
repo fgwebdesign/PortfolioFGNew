@@ -38,7 +38,9 @@ import luzuy from '../images/luzuy.png'
 import startqa from  '../images/startqa.png'
 import castelier from '../images/castelier.png'
 import rbgestudio from '../images/rbgestudio.png'
-
+import webflow from '../images/webflow.png'
+import nextjs from '../images/nextjs.png'
+import practia from '../images/practia.png'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -87,6 +89,10 @@ export const skills = [
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
+        name: "Next Js",
+        image: nextjs,
+      },
+      {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
       },
@@ -117,8 +123,7 @@ export const skills = [
       },
       {
         name: "WebFlow",
-        image:
-          "https://cdn.icon-icons.com/icons2/2699/PNG/512/webflow_logo_icon_169218.png",
+        image: webflow,
       },
       {
         name: "TailWind",
@@ -298,6 +303,28 @@ export const experiences = [
       "Figma",
       "WordPress",
       "Adobe Photoshop"
+    ],
+  },
+  {
+    id: 0,
+    img: practia,
+    role: "Quality Assurance & Frontend Developer",
+    company: "Practia Uruguay",
+    date: "2024 - actual",
+    desc: "Estoy trabajando en modalidad contractor para la empresa Practia, encargado de la realizacion de features frontend con tecnologias como React Js, Next Js, Tailwind CSS, entre otras.",
+    skills: [
+      "React Js",
+      "Next Js",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "Git",
+      "GitHub",
+      "Figma",
+      "Confluence",
+      "MySQL Workbench",
+      "Postman",
+      "JIRA",
     ],
   },
   {
