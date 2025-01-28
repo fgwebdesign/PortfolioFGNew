@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 
 const Document = styled.img`
     display: none;
@@ -145,20 +146,21 @@ const Skill = styled.div`
 
 
 const ExperienceCard = ({ experience }) => {
+    const { t } = useTranslation();
+    
     return (
         <Card>
             <Top>
                 <Image src={experience.img} />
                 <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
+                    <Role>{t(experience.role)}</Role>
+                    <Company>{t(experience.company)}</Company>
                     <Date>{experience.date}</Date>
                 </Body>
             </Top>
             <Description>
                 {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
-
+                    <Span>{t(experience.desc)}</Span>
                 }
                 {experience?.skills &&
                     <>
@@ -167,7 +169,7 @@ const ExperienceCard = ({ experience }) => {
                             <b>Skills:</b>
                             <ItemWrapper>
                                 {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
+                                    <Skill key={index}>• {skill}</Skill>
                                 ))}
                             </ItemWrapper>
                         </Skills>

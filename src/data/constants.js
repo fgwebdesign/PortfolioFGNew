@@ -287,31 +287,12 @@ export const skills = [
 
 export const experiences = [
   {
-    id: 0,
-    img: logofg,
-    role: "CEO & Web Developer - Owner",
-    company: "FG WEB DESIGNS",
-    date: "2020 - actual",
-    desc: "Especializado en la gestión de diseño y desarrollo de páginas web a medida, incluyendo E-Commerce, landings y sitios corporativos.",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React Js",
-      "Tailwind CSS",
-      "WebFlow",
-      "Figma",
-      "WordPress",
-      "Adobe Photoshop"
-    ],
-  },
-  {
-    id: 0,
+    id: 1,
     img: practia,
-    role: "Quality Assurance & Frontend Developer",
-    company: "Practia Uruguay",
+    role: "role_qa_frontend",
+    company: "company_practia",
     date: "2024 - actual",
-    desc: "Estoy trabajando en modalidad contractor para la empresa Practia, encargado de la realizacion de features frontend con tecnologias como React Js, Next Js, Tailwind CSS, entre otras.",
+    desc: "experience_practiauruguay",
     skills: [
       "React Js",
       "Next Js",
@@ -328,12 +309,12 @@ export const experiences = [
     ],
   },
   {
-    id: 0,
+    id: 2,
     img: logoucontact,
-    role: "Software Quality Assurance Engineer - Employed",
-    company: "Ucontact by net2phone",
+    role: "role_qa_engineer",
+    company: "company_ucontact",
     date: "2024 - actual",
-    desc: "Actualmente me encuentro trabajando como Software Quality Assurance Engineer en la empresa Ucontact by net2phone, encargado de la creación y ejecución de casos de prueba, reporte de errores y áreas de mejora. Además, soy responsable de la automatización de pruebas y la integración de herramientas de QA en el flujo de trabajo de desarrollo.",
+    desc: "experience_ucontactbynet2phone",
     skills: [
       "GitHub",
       "SalesForce",
@@ -342,16 +323,16 @@ export const experiences = [
       "Termius",
       "Postman",
       "Confluence",
-      "MySQL Workbench",
+      "MySQL Workbench"
     ],
   },
   {
-    id: 1,
+    id: 3,
     img: logonareia,
-    role: "Mid Functional Tester - Employed",
-    company: "NAREIA SOFTWARE",
+    role: "role_functional_tester",
+    company: "company_nareia",
     date: "2023 - 2024",
-    desc: "Formé parte del equipo de QA para la aplicación mobile 'MiDinero', específicamente en el rol de Tester Funcional. Dentro de mis responsabilidades se incluye la identificación y reporte de errores y áreas de mejora, la elaboración de casos de prueba y user stories, así como la ejecución de pruebas de regresión en diversos entornos de desarrollo.",
+    desc: "experience_nareiasoftware",
     skills: [
       "JIRA",
       "Figma",
@@ -364,16 +345,16 @@ export const experiences = [
       "BrowserStack",
       "Slack",
       "Confluence",
-      "Toggl",
+      "Toggl"
     ],
   },
   {
-    id: 2,
-    img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation - Contractor",
-    company: "Start QA",
+    id: 4,
+    img: startqa,
+    role: "role_qa_automation",
+    company: "company_startqa",
     date: "2022 - 2024",
-    desc: "Información Confidencial - Proyecto de Automation en Kotlin para un cliente en Estados Unidos.",
+    desc: "experience_startqa_1",
     skills: [
       "Kotlin",
       "Espresso Library",
@@ -387,50 +368,12 @@ export const experiences = [
     ],
   },
   {
-    id: 3,
-    img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation / Manual - Contractor",
-    company: "Start QA",
-    date: "2022 - 2023",
-    desc: "Información Confidencial - Proyecto Automation y Manual que brinda servicios a empresas como Okta, Auth0, Azure, encargado del control de calidad, también de automatizar casos de prueba en Cypress.",
-    skills: [
-      "Cypress",
-      "LaunchDarkly",
-      "Postman",
-      "MongoDB",
-      "GitHub",
-      "PracticTests",
-      "Figma",
-      "Slack",
-      "JIRA"
-    ],
-  },
-  {
-    id: 4,
-    img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Manual - Contractor",
-    company: "Start QA",
-    date: "2022 - 2022",
-    desc: "Información Confidencial - Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
-    skills: [
-      "Cypress",
-      "LaunchDarkly",
-      "Postman",
-      "MongoDB",
-      "GitHub",
-      "PracticTests",
-      "Figma",
-      "Slack",
-      "JIRA"
-    ],
-  },
-  {
     id: 5,
-    img: "https://st2.depositphotos.com/38197074/47070/v/1600/depositphotos_470706378-stock-illustration-initial-letter-vector-logo.jpg",
-    role: "Quality Assurance Automation / Manual - Contractor",
-    company: "Start QA",
-    date: "2021 - 2022",
-    desc: "Información Confidencial - Proyecto de billetera virtual - gestor de gastos Automation y Manual en Cypress para un cliente de los Estados Unidos.",
+    img: startqa,
+    role: "role_qa_automation_manual",
+    company: "company_startqa",
+    date: "2022 - 2023",
+    desc: "experience_startqa_2",
     skills: [
       "Cypress",
       "LaunchDarkly",
@@ -445,11 +388,49 @@ export const experiences = [
   },
   {
     id: 6,
+    img: startqa,
+    role: "role_qa_manual",
+    company: "company_startqa",
+    date: "2022 - 2022",
+    desc: "experience_startqa_3",
+    skills: [
+      "Cypress",
+      "LaunchDarkly",
+      "Postman",
+      "MongoDB",
+      "GitHub",
+      "PracticTests",
+      "Figma",
+      "Slack",
+      "JIRA"
+    ],
+  },
+  {
+    id: 7,
+    img: startqa,
+    role: "role_qa_automation_manual",
+    company: "company_startqa",
+    date: "2021 - 2022",
+    desc: "experience_startqa_4",
+    skills: [
+      "Cypress",
+      "LaunchDarkly",
+      "Postman",
+      "MongoDB",
+      "GitHub",
+      "PracticTests",
+      "Figma",
+      "Slack",
+      "JIRA"
+    ],
+  },
+  {
+    id: 8,
     img: logoecommerce,
     role: "Frontend Developer",
     company: "E-Commerce Full",
     date: "2021 - 2021",
-    desc: "Desarollador Front-End para los clientes de la empresa como: Zapateria TOTO, WATCHME, Carter's, entre otros. Maquetador de sitios e-commerce, encargado del área de marketing y redes sociales.",
+    desc: "experience_ecommercefull",
     skills: [
       "HTML",
       "PHP",
@@ -462,12 +443,12 @@ export const experiences = [
     ],
   },
   {
-    id: 4,
+    id: 9,
     img: "https://pbs.twimg.com/profile_images/1224354283342254080/o8qBO7rA_400x400.jpg",
     role: "Web Designer / Marketing",
     company: "CellPay - DIRECTV AGENTE OFICIAL",
-    date: "2020 -  2020",
-    desc: "Diseñador web de la página de la empresa, también encargado del área de marketing y publicidad.",
+    date: "2020 - 2020",
+    desc: "experience_cellpaydirectvagente",
     skills: [
       "HTML",
       "CSS",
@@ -479,7 +460,6 @@ export const experiences = [
       "Illustrator",
     ],
   },
-
 ];
 
 export const education = [
