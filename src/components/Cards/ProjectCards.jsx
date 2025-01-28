@@ -1,148 +1,130 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
+import { motion, useScroll } from 'framer-motion'
+import { useParallax } from '../../hooks/useParallax'
 
-
-const Button = styled.button`
-    display: none;
-    width: 100%;
-    padding: 10px;
-    background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.text_black};
-    font-size: 14px;
-    font-weight: 700;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.8s ease-in-out;
+const ProjectContainer = styled.section`
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    scroll-snap-align: start;
+    margin-top: 40px;
 `
-const Card = styled.div`
-    width: 320px;
-    height: 340px;
-    background-color: ${({ theme }) => theme.card};
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
-    overflow: hidden;
-    padding: 26px 20px;
+
+const CardWrapper = styled.div`
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.1);
-    }
-    &:hover ${Button} {
-        display: block;
-    }
+    gap: 24px;
+`
+
+const Card = styled(motion.div)`
+    width: 100%;
+    position: relative;
+`
+
+const ImageContainer = styled.div`
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    cursor: default;
 `
 
 const Image = styled.img`
     width: 100%;
-    height: 190px;
-    background-color: ${({ theme }) => theme.white};
-    border-radius: 10px;
-    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
-`
-
-const Tags = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 4px;
-`
-
-const Tag = styled.span`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
-    padding: 2px 8px;
-    border-radius: 10px;
-`
-
-const Details = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    padding: 0px 2px;
-`
-const Title = styled.div`
-    font-size: 20px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_secondary};
-    overflow: hidden;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-`
-
-const Date = styled.div`
-    font-size: 12px;
-    margin-left: 2px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
-    @media only screen and (max-width: 768px){
-        font-size: 10px;
+    height: 100%;
+    object-fit: contain;
+    background-color: ${({ theme }) => theme.card};
+    transition: transform 0.3s ease;
+    
+    ${ImageContainer}:hover & {
+        transform: scale(1.05);
     }
 `
 
-
-const Description = styled.div`
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 99};
-    overflow: hidden;
-    margin-top: 8px;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+const ContentContainer = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 20px 0;
 `
 
-const Members = styled.div`
+const TextContent = styled.div`
     display: flex;
-    align-items: center;
-    padding-left: 10px;
-`
-const Avatar = styled.img`
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    margin-left: -10px;
-    background-color: ${({ theme }) => theme.white};
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border: 3px solid ${({ theme }) => theme.card};
+    flex-direction: column;
+    gap: 16px;
+    max-width: 70%;
+    
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
 `
 
-const ProjectCards = ({project,setOpenModal}) => {
+const ProjectNumber = styled(motion.h2)`
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 100px;
+    font-weight: 700;
+    opacity: 0.5;
+    margin: 0;
+    line-height: 1;
+    text-align: right;
+`
+
+const Title = styled(motion.h3)`
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.text_primary};
+    margin: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+`
+
+const Description = styled.p`
+    font-size: 18px;
+    color: ${({ theme }) => theme.text_secondary};
+    margin: 0;
+    max-width: 600px;
+`
+
+const ProjectCards = ({project, index}) => {
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({ target: ref })
+    const y = useParallax(scrollYProgress, 300)
+    const yTitle = useParallax(scrollYProgress, -300)
+
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Image src={project.image}/>
-            <Tags>
-                {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
-                ))}
-            </Tags>
-            <Details>
-                <Title>{project.title}</Title>
-                <Date>{project.date}</Date>
-                <Description>{project.description}</Description>
-            </Details>
-            <Members>
-                {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
-                ))}
-            </Members>
-            {/* <Button>View Project</Button> */}
-        </Card>
+        <ProjectContainer>
+            <CardWrapper ref={ref}>
+                <Card
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <ImageContainer>
+                        <Image src={project.image} alt={project.title} />
+                    </ImageContainer>
+                    <ContentContainer>
+                        <TextContent>
+                            <Title style={{ y: yTitle }}>{project.title}</Title>
+                            <Description>{project.description}</Description>
+                        </TextContent>
+                        <ProjectNumber
+                            style={{ y }}
+                        >{`#${(index + 1).toString().padStart(3, '0')}`}</ProjectNumber>
+                    </ContentContainer>
+                </Card>
+            </CardWrapper>
+        </ProjectContainer>
     )
 }
 
