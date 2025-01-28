@@ -121,9 +121,6 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
-
-
-
 const RightImage = styled(animated.img)`
   position: absolute;
   right: 1%;
@@ -176,12 +173,12 @@ const Skills = () => {
         <Title>{t('skillsTitle')}</Title>
         <Desc>{t('skillsDescription')}</Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill key={skill.id}>
-              <SkillTitle>{skill.title}</SkillTitle>
+          {skills.map((skill, index) => (
+            <Skill key={index}>
+              <SkillTitle>{t(skill.title)}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem key={item.id}>
+                {skill.skills.map((item, index) => (
+                  <SkillItem key={index}>
                     <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>

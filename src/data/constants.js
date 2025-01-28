@@ -81,7 +81,7 @@ export const FAQData = [
 
 export const skills = [
   {
-    title: "Front End",
+    title: "skillsFrontend",
     skills: [
       {
         name: "React Js",
@@ -136,7 +136,7 @@ export const skills = [
     ],
   },
   {
-    title: "Quality Assurance",
+    title: "skillsBackend",
     skills: [
       {
         name: "Postman",
@@ -174,7 +174,7 @@ export const skills = [
     ],
   },
   {
-    title: "Languages",
+    title: "skillsLanguages",
     skills: [
       {
         name: "Cypress",
@@ -209,7 +209,7 @@ export const skills = [
     ],
   },
   {
-    title: "Tools",
+    title: "skillsTools",
     skills: [
       {
         name: "Android Studio",
@@ -286,6 +286,25 @@ export const skills = [
 ];
 
 export const experiences = [
+  {
+    id: 0,
+    img: logofg,
+    role: "role_ceo",
+    company: "company_fgweb",
+    date: "2020 - actual",
+    desc: "experience_fgwebdesigns",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React Js",
+      "Tailwind CSS",
+      "WebFlow",
+      "Figma",
+      "WordPress",
+      "Adobe Photoshop"
+    ],
+  },
   {
     id: 1,
     img: practia,

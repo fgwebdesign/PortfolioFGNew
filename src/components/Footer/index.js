@@ -3,6 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
 import logoImage from '../../images/logofgoriginal.png';
+import { useTranslation } from 'react-i18next';
 
 
 const FooterContainer = styled.div`
@@ -88,24 +89,25 @@ const Copyright = styled.p`
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <FooterContainer>
       <FooterWrapper>
         <Logo src={logoImage} alt="FG WEB DESIGNS" />
         <Nav>
-          <NavLink href="#about">Inicio</NavLink>
-          <NavLink href="#skills">Habilidades</NavLink>
-          <NavLink href="#experience">Experiencia</NavLink>
-          <NavLink href="#projects">Portafolio</NavLink>
-          <NavLink href="#education">Resumen</NavLink>
+          <NavLink href="#about">{t('footerHome')}</NavLink>
+          <NavLink href="#skills">{t('footerSkills')}</NavLink>
+          <NavLink href="#experience">{t('footerExperience')}</NavLink>
+          <NavLink href="#projects">{t('footerPortfolio')}</NavLink>
+          <NavLink href="#education">{t('footerResume')}</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; {currentYear} FG WEB DESIGNS. Todos los derechos reservados.
+          &copy; {currentYear} FG WEB DESIGNS. {t('footerRights')}
         </Copyright>
       </FooterWrapper>
     </FooterContainer>
