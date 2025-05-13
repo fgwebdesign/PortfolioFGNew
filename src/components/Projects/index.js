@@ -1,12 +1,13 @@
 import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Container, Wrapper, Title, Desc, CardContainer, FilterContainer, FilterGroup, FilterButton, YearSelect, FilterDivider, LoadMoreButton, AnimatedImage, AdditionalAnimatedImage } from './ProjectsStyle'
+import { Container, Wrapper, Title, Desc, CardContainer, FilterContainer, FilterGroup, FilterButton, YearSelect, FilterDivider, LoadMoreButton, AnimatedImage, AdditionalAnimatedImage, FloatingInfo, InfoText, HandPointer } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 import { useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 import portfolioImage from '../../images/portfolio3.png';
 import additionalImage from '../../images/portfolio1.png';
+import handPointerImage from '../../images/icons/hand2.png';
 
 const CARDS_PER_PAGE = 6;
 
@@ -42,6 +43,43 @@ const Projects = ({ openModal, setOpenModal }) => {
       opacity: additionalInView ? 1 : 0,
     },
     config: { tension: 20, friction: 20 },
+  });
+
+  const floatingInfoProps = useSpring({
+    from: { 
+      transform: 'translate(50%, -50%) scale(0.9)',
+      opacity: 0 
+    },
+    to: async (next) => {
+      while (true) {
+        await next({
+          transform: 'translate(50%, -50%) scale(1)',
+          opacity: 1
+        });
+        await next({
+          transform: 'translate(50%, -50%) scale(0.95)',
+          opacity: 0.9
+        });
+      }
+    },
+    config: { tension: 100, friction: 10 },
+  });
+
+  const handAnimation = useSpring({
+    from: { 
+      transform: 'rotate(-15deg) translateY(0px)',
+    },
+    to: async (next) => {
+      while (true) {
+        await next({
+          transform: 'rotate(-15deg) translateY(-10px)',
+        });
+        await next({
+          transform: 'rotate(-15deg) translateY(0px)',
+        });
+      }
+    },
+    config: { tension: 120, friction: 14 },
   });
 
   // Get unique years from projects
@@ -87,6 +125,14 @@ const Projects = ({ openModal, setOpenModal }) => {
           src={portfolioImage} 
           alt="Portafolio" 
         />
+        <FloatingInfo style={floatingInfoProps}>
+          <InfoText>¡Haz clic en cualquier proyecto para ver más detalles!</InfoText>
+          <HandPointer 
+            src={handPointerImage}
+            alt="Click pointer" 
+            style={handAnimation}
+          />
+        </FloatingInfo>
         <Desc>
           {t('portfolioDescription')}
         </Desc>
@@ -96,32 +142,32 @@ const Projects = ({ openModal, setOpenModal }) => {
               active={categoryFilter === 'all'} 
               onClick={() => handleFilterChange('all')}
             >
-              Todos
+              {t('allCategories')}
             </FilterButton>
             <FilterDivider />
             <FilterButton 
               active={categoryFilter === 'landing page'} 
               onClick={() => handleFilterChange('landing page')}
             >
-              LANDING PAGES
+              {t('category_landing_page')}
             </FilterButton>
             <FilterDivider />
             <FilterButton 
               active={categoryFilter === 'e-commerce'} 
               onClick={() => handleFilterChange('e-commerce')}
             >
-              E-COMMERCE
+              {t('category_e-commerce')}
             </FilterButton>
             <FilterDivider />
             <FilterButton 
               active={categoryFilter === 'web catalogue'} 
               onClick={() => handleFilterChange('web catalogue')}
             >
-              WEB CATALOGUE
+              {t('category_web_catalogue')}
             </FilterButton>
           </FilterGroup>
           <YearSelect value={yearFilter} onChange={handleYearChange}>
-            <option value="all">Todos los años</option>
+            <option value="all">{t('allYears')}</option>
             {availableYears.map(year => (
               <option key={year} value={year}>{year}</option>
             ))}

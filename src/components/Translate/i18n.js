@@ -83,7 +83,21 @@ i18n
           "skillsFrameworks": "Frameworks",
           "skillsOthers": "Others",
           "skillsDesign": "Design",
-          "skillsDatabase": "Database"
+          "skillsDatabase": "Database",
+          "backToProjects": "Back to projects",
+          "projectNumber": "Project",
+          "projectDate": "Date",
+          "projectCategory": "Category",
+          "projectTechnologies": "Technologies used",
+          "visitWebsite": "Visit website",
+          "previousProject": "Previous",
+          "nextProject": "Next",
+          "scrollToSeeMore": "Scroll to see more",
+          "category_e-commerce": "E-commerce",
+          "category_landing_page": "Landing Page",
+          "category_web_catalogue": "Web Catalogue",
+          "allCategories": "All",
+          "allYears": "All years"
         }
       },
       es: {
@@ -162,7 +176,21 @@ i18n
           "skillsFrameworks": "Frameworks",
           "skillsOthers": "Otros",
           "skillsDesign": "Diseño",
-          "skillsDatabase": "Base de Datos"
+          "skillsDatabase": "Base de Datos",
+          "backToProjects": "Volver a proyectos",
+          "projectNumber": "Proyecto",
+          "projectDate": "Fecha",
+          "projectCategory": "Categoría",
+          "projectTechnologies": "Tecnologías utilizadas",
+          "visitWebsite": "Visitar sitio web",
+          "previousProject": "Anterior",
+          "nextProject": "Siguiente",
+          "scrollToSeeMore": "Scroll para ver más",
+          "category_e-commerce": "E-commerce",
+          "category_landing_page": "Landing Page",
+          "category_web_catalogue": "Catálogo Web",
+          "allCategories": "Todos",
+          "allYears": "Todos los años"
         }
       }
     },

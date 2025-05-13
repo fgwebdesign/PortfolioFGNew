@@ -275,3 +275,75 @@ export const YearSelect = styled.select`
         padding: 6px 12px;
     }
 `;
+
+export const FloatingInfo = styled(animated.div)`
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transform-origin: center;
+    padding: 15px 20px;
+    border-radius: 20px;
+    z-index: 10;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+`;
+
+export const InfoText = styled.div`
+    color: ${({ theme }) => theme.text_primary};
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(
+        225deg,
+        ${({ theme }) => theme.primary + "20"} 0%,
+        ${({ theme }) => theme.primary + "50"} 100%
+    );
+    padding: 12px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid ${({ theme }) => theme.primary + "30"};
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        right: 30px;
+        width: 15px;
+        height: 15px;
+        background: inherit;
+        border-right: 1px solid ${({ theme }) => theme.primary + "30"};
+        border-bottom: 1px solid ${({ theme }) => theme.primary + "30"};
+        transform: rotate(45deg);
+        backdrop-filter: blur(5px);
+    }
+`;
+
+export const ClickIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    background: ${({ theme }) => theme.primary + "40"};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 0;
+    
+    svg {
+        color: ${({ theme }) => theme.text_primary};
+        font-size: 20px;
+    }
+`;
+
+export const HandPointer = styled(animated.img)`
+    width: 80px;
+    height: auto;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+`;

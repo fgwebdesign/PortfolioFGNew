@@ -593,6 +593,11 @@ export const projects = [
       "WooCommerce",
     ],
     category: "e-commerce",
+    url: "https://casabrava.com.uy",
+    description: {
+      en: "Furniture and decoration e-commerce with a modern and minimalist design. Complete WooCommerce implementation with payment system, inventory management and custom admin panel.",
+      es: "E-commerce de muebles y decoración con un diseño moderno y minimalista. Implementación completa de WooCommerce con sistema de pagos, gestión de inventario y panel de administración personalizado."
+    }
   },
   {
     id: 2,
@@ -606,6 +611,11 @@ export const projects = [
       "React Js",
     ],
     category: "landing page",
+    url: "https://www.schweizerpsychology.com/",
+    description: {
+      en: "Professional website for psychology services, with appointment booking system, integrated blog and patient resources area. Design focused on user experience and accessibility.",
+      es: "Sitio web profesional para servicios de psicología, con sistema de reserva de citas, blog integrado y área de recursos para pacientes. Diseño enfocado en la experiencia del usuario y la accesibilidad."
+    }
   },
   {
     id: 3,
@@ -619,6 +629,11 @@ export const projects = [
       "React Js",
     ],
     category: "landing page",
+    url: "https://suen.uy",
+    description: {
+      en: "Digital platform for wellness and health services, with calendar integration for appointments, membership system and interactive multimedia content.",
+      es: "Plataforma digital para servicios de bienestar y salud, con integración de calendario para citas, sistema de membresías y contenido multimedia interactivo."
+    }
   },
   {
     id: 4,
@@ -632,6 +647,11 @@ export const projects = [
       "WooCommerce",
     ],
     category: "e-commerce",
+    url: "https://demicherifitness.com/",
+    description: {
+      en: "Online fitness platform with personalized training programs, sports products store and user progress tracking system.",
+      es: "Plataforma de fitness online con programas de entrenamiento personalizados, tienda de productos deportivos y sistema de seguimiento de progreso para usuarios."
+    }
   },
   {
     id: 5,
@@ -645,6 +665,11 @@ export const projects = [
       "WooCommerce",
     ],
     category: "e-commerce",
+    url: "https://harmonybycarola.com",
+    description: {
+      en: "E-commerce specialized in wellness and personal care products, with integrated blog and product review system.",
+      es: "E-commerce especializado en productos de bienestar y cuidado personal, con blog integrado y sistema de reseñas de productos."
+    }
   },
   {
     id: 6,

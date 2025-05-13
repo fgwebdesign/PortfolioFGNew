@@ -2,6 +2,7 @@ import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
 width: 100%;
@@ -184,6 +185,13 @@ const Button = styled.a`
 
 const index = ({ openModal, setOpenModal }) => {
     const project = openModal?.project;
+    const { i18n } = useTranslation();
+    
+    if (!project) return null;
+    
+    const currentLanguage = i18n.language.startsWith('en') ? 'en' : 'es';
+    const projectDescription = project.description?.[currentLanguage] || project.description;
+
     return (
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
             <Container>
@@ -205,7 +213,7 @@ const index = ({ openModal, setOpenModal }) => {
                             <Tag>{tag}</Tag>
                         ))}
                     </Tags>
-                    <Desc>{project?.description}</Desc>
+                    <Desc>{projectDescription}</Desc>
                     {project.member && (
                         <>
                             <Label>Members</Label>
@@ -227,7 +235,6 @@ const index = ({ openModal, setOpenModal }) => {
                     )}
                 </Wrapper>
             </Container>
-
         </Modal>
     )
 }

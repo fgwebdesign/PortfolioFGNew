@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaCode } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Card = styled.div`
     width: 330px;
@@ -191,9 +193,19 @@ const Avatar = styled.img`
     border: 3px solid ${({ theme }) => theme.card};
 `
 
-const ProjectCards = ({project, setOpenModal}) => {
+const ProjectCards = ({project}) => {
+    const navigate = useNavigate();
+    const { i18n } = useTranslation();
+
+    const handleClick = () => {
+        navigate(`/project/${project.id}`);
+    };
+
+    const currentLanguage = i18n.language.startsWith('en') ? 'en' : 'es';
+    const projectDescription = project.description?.[currentLanguage] || project.description;
+
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
+        <Card onClick={handleClick}>
             <ImageContainer>
                 <Image src={project.image} alt={project.title}/>
             </ImageContainer>
@@ -202,7 +214,7 @@ const ProjectCards = ({project, setOpenModal}) => {
                     <Title>{project.title}</Title>
                     <Date>{project.date}</Date>
                 </Details>
-                <Description>{project.description}</Description>
+                <Description>{projectDescription}</Description>
                 <TechSection>
                     <TechTitle>
                         <FaCode />
