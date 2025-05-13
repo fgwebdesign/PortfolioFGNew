@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next';
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider, AnimatedImage, AdditionalAnimatedImage } from './ProjectsStyle'
+import { Container, Wrapper, Title, Desc, CardContainer, FilterContainer, FilterGroup, FilterButton, YearSelect, FilterDivider, LoadMoreButton, AnimatedImage, AdditionalAnimatedImage } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 import { useSpring } from '@react-spring/web';
@@ -8,10 +8,14 @@ import { useInView } from 'react-intersection-observer';
 import portfolioImage from '../../images/portfolio3.png';
 import additionalImage from '../../images/portfolio1.png';
 
+const CARDS_PER_PAGE = 6;
 
 const Projects = ({ openModal, setOpenModal }) => {
   const { t } = useTranslation();
-  const [toggle, setToggle] = useState('all');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  const [yearFilter, setYearFilter] = useState('all');
+  const [visibleCards, setVisibleCards] = useState(CARDS_PER_PAGE);
+  
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -40,51 +44,106 @@ const Projects = ({ openModal, setOpenModal }) => {
     config: { tension: 20, friction: 20 },
   });
 
+  // Get unique years from projects
+  const availableYears = useMemo(() => {
+    const years = [...new Set(projects.map(project => project.date))];
+    return years.sort((a, b) => b - a); // Sort years in descending order
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    return projects.filter(project => {
+      const matchesCategory = categoryFilter === 'all' || project.category.toLowerCase() === categoryFilter.toLowerCase();
+      const matchesYear = yearFilter === 'all' || project.date === parseInt(yearFilter);
+      return matchesCategory && matchesYear;
+    });
+  }, [categoryFilter, yearFilter]);
+
+  const handleFilterChange = (category) => {
+    setCategoryFilter(category);
+    setVisibleCards(CARDS_PER_PAGE);
+  };
+
+  const handleYearChange = (event) => {
+    setYearFilter(event.target.value);
+    setVisibleCards(CARDS_PER_PAGE);
+  };
+
+  const handleLoadMore = () => {
+    setVisibleCards(prev => prev + CARDS_PER_PAGE);
+  };
+
   return (
     <Container id="projects">
       <Wrapper>
         <Title ref={titleRef}>{t('portfolioTitle')}</Title>
-        <AdditionalAnimatedImage ref={additionalRef} style={additionalImageProps} src={additionalImage} alt="Additional" />
-        <AnimatedImage style={portfolioImageProps} src={portfolioImage} alt="Portafolio" />
+        <AdditionalAnimatedImage 
+          ref={additionalRef} 
+          style={additionalImageProps} 
+          src={additionalImage} 
+          alt="Additional" 
+        />
+        <AnimatedImage 
+          style={portfolioImageProps} 
+          src={portfolioImage} 
+          alt="Portafolio" 
+        />
         <Desc>
-        {t('portfolioDescription')}
+          {t('portfolioDescription')}
         </Desc>
-        <ToggleButtonGroup >
-          {toggle === 'all' ?
-            <ToggleButton active value="all" onClick={() => setToggle('all')}>Todos</ToggleButton>
-            :
-            <ToggleButton value="all" onClick={() => setToggle('all')}>Todos</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>LANDING PAGES</ToggleButton>
-            :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>LANDING PAGES</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>E-COMMERCE</ToggleButton>
-            :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>E-COMMERCE</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>WEB CATALOGUE</ToggleButton>
-            :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>WEB CATALOGUE</ToggleButton>
-          }
-        </ToggleButtonGroup>
-        <CardContainer>
-          {toggle === 'all' && projects
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
+        <FilterContainer>
+          <FilterGroup>
+            <FilterButton 
+              active={categoryFilter === 'all'} 
+              onClick={() => handleFilterChange('all')}
+            >
+              Todos
+            </FilterButton>
+            <FilterDivider />
+            <FilterButton 
+              active={categoryFilter === 'landing page'} 
+              onClick={() => handleFilterChange('landing page')}
+            >
+              LANDING PAGES
+            </FilterButton>
+            <FilterDivider />
+            <FilterButton 
+              active={categoryFilter === 'e-commerce'} 
+              onClick={() => handleFilterChange('e-commerce')}
+            >
+              E-COMMERCE
+            </FilterButton>
+            <FilterDivider />
+            <FilterButton 
+              active={categoryFilter === 'web catalogue'} 
+              onClick={() => handleFilterChange('web catalogue')}
+            >
+              WEB CATALOGUE
+            </FilterButton>
+          </FilterGroup>
+          <YearSelect value={yearFilter} onChange={handleYearChange}>
+            <option value="all">Todos los años</option>
+            {availableYears.map(year => (
+              <option key={year} value={year}>{year}</option>
             ))}
-          {projects
-            .filter((item) => item.category === toggle)
+          </YearSelect>
+        </FilterContainer>
+        <CardContainer>
+          {filteredProjects
+            .slice(0, visibleCards)
             .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />
+              <ProjectCard 
+                key={project.id} 
+                project={project} 
+                openModal={openModal} 
+                setOpenModal={setOpenModal} 
+              />
             ))}
         </CardContainer>
+        {visibleCards < filteredProjects.length && (
+          <LoadMoreButton onClick={handleLoadMore}>
+            Cargar más proyectos
+          </LoadMoreButton>
+        )}
       </Wrapper>
     </Container>
   )

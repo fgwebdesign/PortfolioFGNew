@@ -41,6 +41,11 @@ import rbgestudio from '../images/rbgestudio.png'
 import webflow from '../images/webflow.png'
 import nextjs from '../images/nextjs.png'
 import practia from '../images/practia.png'
+import harmony from '../images/clients/harmony.png'
+import casabravaecomm from '../images/clients/casab.png'
+import demicherifit from '../images/clients/dem.png'
+import schpsyco from '../images/clients/schpsy.png'
+import suen from '../images/clients/suen.png'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -577,7 +582,72 @@ export const education = [
 
 export const projects = [
   {
-    id: 0,
+    id: 1,
+    title: "Casa Brava E-Commerce",
+    date: "2025",
+    image: casabravaecomm,
+    tags: [
+      "Wordpress",
+      "WP Backery",
+      "WP Forms",
+      "WooCommerce",
+    ],
+    category: "e-commerce",
+  },
+  {
+    id: 2,
+    title: "Schweizer Psychology",
+    date: "2025",
+    image: schpsyco,
+    tags: [
+      "Next Js",
+      "Tailwind CSS",
+      "TypeScript",
+      "React Js",
+    ],
+    category: "landing page",
+  },
+  {
+    id: 3,
+    title: "SUEN Uruguay",
+    date: "2025",
+    image: suen,
+    tags: [
+      "Next Js",
+      "Tailwind CSS",
+      "TypeScript",
+      "React Js",
+    ],
+    category: "landing page",
+  },
+  {
+    id: 4,
+    title: "Demicheri Fitness",
+    date: "2025",
+    image: demicherifit,
+    tags: [
+      "Wordpress",
+      "Elementor",
+      "WP Forms",
+      "WooCommerce",
+    ],
+    category: "e-commerce",
+  },
+  {
+    id: 5,
+    title: "Harmony By Carola",
+    date: "2025",
+    image: harmony,
+    tags: [
+      "Wordpress",
+      "Elementor",
+      "WP Forms",
+      "WooCommerce",
+    ],
+    category: "e-commerce",
+  },
+  {
+    id: 6,
     title: "Castelier Bienes Raíces",
     date: "2024",
     image: castelier,
@@ -587,10 +657,10 @@ export const projects = [
       "Wordpress",
       "Elementor",
     ],
-    category: "android app",
+    category: "web catalogue",
   },
   {
-    id: 1,
+    id: 7,
     title: "Luz Uy Importaciones",
     date: "2024",
     image: luzuy,
@@ -600,10 +670,10 @@ export const projects = [
       "Wordpress",
       "Elementor",
     ],
-    category: "android app",
+    category: "e-commerce",
   },
   {
-    id: 1,
+    id: 8,
     title: "RBG Estudio Jurídico",
     date: "2024",
     image: rbgestudio,
@@ -612,10 +682,10 @@ export const projects = [
       "CSS",
       "Javascript",
     ],
-    category: "android app",
+    category: "landing page",
   },
   {
-    id: 2,
+    id: 9,
     title: "Picante Jerseys",
     date: "2024",
     image: picanteimage,
@@ -625,10 +695,10 @@ export const projects = [
       "Wordpress",
       "Elementor",
     ],
-    category: "android app",
+    category: "e-commerce",
   },
   {
-    id: 3,
+    id: 10,
     title: "StartQA",
     date: "2024",
     image: startqa,
@@ -638,10 +708,10 @@ export const projects = [
       "JS",
       "Boostrap",
     ],
-    category: "web app",
+    category: "landing page",
   },
   {
-    id: 3,
+    id: 11,
     title: "B & K Arquitectos",
     date: "2023",
     image: bykimage,
@@ -651,10 +721,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "web catalogue",
   },
   {
-    id: 4,
+    id: 12,
     title: "Shot By Jeydi",
     date: "2023",
     image: shotbyjeydiimage,
@@ -664,10 +734,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "landing page",
   },
   {
-    id: 5,
+    id: 13,
     title: "Del Arca Producciones",
     date: "2023",
     image: delarcaimage,
@@ -677,10 +747,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "landing page",
   },
   {
-    id: 6,
+    id: 14,
     title: "Moño Negro Catering",
     date: "2023",
     image: monionegroimage,
@@ -690,10 +760,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "machine learning",
+    category: "web catalogue",
   },
   {
-    id: 7,
+    id: 15,
     title: "Drones orientales",
     date: "2023",
     image: logodrones,
@@ -703,10 +773,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "landing page",
   },
   {
-    id: 8,
+    id: 16,
     title: "Re-branding Duki Website",
     date: "2023",
     image: dukoimage,
@@ -716,10 +786,10 @@ export const projects = [
       "JS",
       "React Js",
     ],
-    category: "android app",
+    category: "landing page",
   },
   {
-    id: 9,
+    id: 17,
     title: "Sabemar Turismo",
     date: "2022",
     image: sabemarimage,
@@ -729,10 +799,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "web catalogue",
   },
   {
-    id: 10,
+    id: 18,
     title: "Agribo Software",
     date: "2021",
     image: agriboimage,
@@ -742,10 +812,10 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "landing page",
   },
   {
-    id: 11,
+    id: 19,
     title: "Seven Containers",
     date: "2021",
     image: sevenimage,
@@ -755,9 +825,8 @@ export const projects = [
       "JSS",
       "SCSS",
     ],
-    category: "web app",
+    category: "web catalogue",
   },
-
 ];
 
 export const clientLogos = [
