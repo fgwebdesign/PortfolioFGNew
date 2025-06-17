@@ -184,7 +184,27 @@ i18n
             location: "Montevideo, Uruguay",
             phone: "+598 92 033 831",
             linkedin: "LinkedIn"
-          }
+          },
+          "process_title": "How We Work",
+          "process_description": "Our development process is designed to ensure the highest quality and client satisfaction. Learn about the steps we follow to create your project.",
+          
+          "process_step1_title": "Meeting and Budget",
+          "process_step1_desc": "We start with a meeting to understand your needs and objectives. We discuss the type of website you need, required functionalities, and establish a clear budget.",
+          "process_step1_feature1": "Creation of shared Google Drive folder",
+          "process_step1_feature2": "Detailed requirements document",
+          "process_step1_feature3": "Design and color palette definition",
+          
+          "process_step2_title": "Development and Testing",
+          "process_step2_desc": "Once the budget is approved, we begin development. We implement the agreed functionalities and perform thorough testing to ensure quality.",
+          "process_step2_feature1": "Development with latest technologies",
+          "process_step2_feature2": "Responsive design for all devices",
+          "process_step2_feature3": "Continuous testing and quality control",
+          
+          "process_step3_title": "Deployment and Delivery",
+          "process_step3_desc": "We perform the production deployment, configure the domain, server, and SSL certificate. We deliver a fully functional and optimized website.",
+          "process_step3_feature1": "Production server deployment",
+          "process_step3_feature2": "Domain and SSL configuration",
+          "process_step3_feature3": "Documentation and usage training"
         }
       },
       es: {
@@ -364,7 +384,27 @@ i18n
             location: "Montevideo, Uruguay",
             phone: "+598 92 033 831",
             linkedin: "LinkedIn"
-          }
+          },
+          "process_title": "¿Cómo Trabajamos?",
+          "process_description": "Nuestro proceso de desarrollo está diseñado para asegurar la mejor calidad y satisfacción del cliente. Conoce los pasos que seguimos para crear tu proyecto.",
+          
+          "process_step1_title": "Reunión y Presupuesto",
+          "process_step1_desc": "Comenzamos con una reunión para entender tus necesidades y objetivos. Discutimos el tipo de sitio web que necesitas, funcionalidades requeridas y establecemos un presupuesto claro.",
+          "process_step1_feature1": "Creación de carpeta compartida en Google Drive",
+          "process_step1_feature2": "Documento detallado de requerimientos",
+          "process_step1_feature3": "Definición de diseño y paleta de colores",
+          
+          "process_step2_title": "Desarrollo y Testing",
+          "process_step2_desc": "Una vez aprobado el presupuesto, comenzamos el desarrollo. Implementamos las funcionalidades acordadas y realizamos pruebas exhaustivas para garantizar la calidad.",
+          "process_step2_feature1": "Desarrollo con las últimas tecnologías",
+          "process_step2_feature2": "Diseño responsive para todos los dispositivos",
+          "process_step2_feature3": "Testing continuo y control de calidad",
+          
+          "process_step3_title": "Despliegue y Entrega",
+          "process_step3_desc": "Realizamos el despliegue en producción, configuramos el dominio, servidor y certificado SSL. Te entregamos un sitio web completamente funcional y optimizado.",
+          "process_step3_feature1": "Despliegue en servidor de producción",
+          "process_step3_feature2": "Configuración de dominio y SSL",
+          "process_step3_feature3": "Documentación y capacitación de uso"
         }
       }
     },

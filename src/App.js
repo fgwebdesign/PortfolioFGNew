@@ -13,6 +13,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import ProjectDetails from './pages/ProjectDetails';
 import Services from './components/Services';
+import ProcessSection from './components/ProcessSection';
 import About from './components/About';
 import styled from 'styled-components';
 
@@ -41,15 +42,14 @@ function App() {
             <Route path="/" element={
               <>
                 <Hero />
-                <Wrapper>
-                  <Services />
-                  <Projects />
-                  <About />
-                  <Experience />
-                  <Education />
-                  <Contact />
-                </Wrapper>
-                <Footer />
+                <Services />
+                <ProcessSection />
+                <Projects />
+                <About />
+                <Skills />
+                <Experience />          
+                <Education />
+                <Contact />
               </>
             } />
             <Route path="/project/:id" element={<ProjectDetails />} />
