@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container, Wrapper, Title, Desc, ServiceContainer, ServiceCard, ServiceIcon, ServiceTitle, ServiceDesc, ServiceFeatures, ServiceFeature, AnimatedImage, ServiceButton, TechSection, TechContent, TechLeft, TechStep, StepNumber, StepContent, StepTitle, StepDescription, TechRight, RocketImage, HighlightedText } from './ServicesStyle';
-import { useSpring } from '@react-spring/web';
-import { useInView } from 'react-intersection-observer';
+import { Container, Wrapper, Title, Desc, ServiceContainer, ServiceCard, ServiceIcon, ServiceTitle, ServiceDesc, ServiceFeatures, ServiceFeature, ServiceButton, TechSection, TechContent, TechLeft, TechStep, StepNumber, StepContent, StepTitle, StepDescription, TechRight, RocketImage, HighlightedText } from './ServicesStyle';
 import { FaCode, FaDesktop, FaMobileAlt, FaSearch, FaCheck, FaArrowRight, FaEnvelope } from 'react-icons/fa';
 import { BiTestTube } from 'react-icons/bi';
-import servicesImage from '../../images/tools.png';
-import rocketImage from '../../images/rocket.png';
-
-// Aquí importaremos las nuevas imágenes cuando las tengas
 import domainImage from '../../images/domain3d.png';
 import hostingImage from '../../images/server3d.png';
 import sslImage from '../../images/ssl3d.png';
@@ -16,11 +10,6 @@ import sslImage from '../../images/ssl3d.png';
 const Services = () => {
     const { t } = useTranslation();
     const [currentImage, setCurrentImage] = useState('domain');
-    
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.2,
-    });
 
     const getImage = () => {
         switch(currentImage) {
@@ -42,45 +31,6 @@ const Services = () => {
     const handleMouseLeave = () => {
         setCurrentImage('default');
     };
-
-    const cardAnimation = useSpring({
-        from: { opacity: 0, transform: 'translateY(50px)' },
-        to: { 
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'translateY(0)' : 'translateY(50px)'
-        },
-        config: { tension: 300, friction: 40 },
-        delay: 200,
-    });
-
-    const imageAnimation = useSpring({
-        from: { transform: 'translateX(100%)', opacity: 0 },
-        to: {
-            transform: inView ? 'translateX(0%)' : 'translateX(100%)',
-            opacity: inView ? 1 : 0,
-        },
-        config: { tension: 20, friction: 10 },
-    });
-
-    const stepAnimation = useSpring({
-        from: { opacity: 0, transform: 'translateX(-50px)' },
-        to: { 
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'translateX(0)' : 'translateX(-50px)'
-        },
-        config: { tension: 300, friction: 40 },
-        delay: 200,
-    });
-
-    const rocketAnimation = useSpring({
-        from: { opacity: 0, transform: 'translateY(50px)' },
-        to: { 
-            opacity: inView ? 1 : 0,
-            transform: inView ? 'translateY(0)' : 'translateY(50px)'
-        },
-        config: { tension: 300, friction: 40 },
-        delay: 400,
-    });
 
     const services = [
         {
@@ -146,14 +96,13 @@ const Services = () => {
     ];
 
     return (
-        <Container id="services" ref={ref}>
+        <Container id="services">
             <Wrapper>
                 <Title>{t('servicesTitle')}</Title>
                 <Desc>{t('servicesDescription')}</Desc>
-                <AnimatedImage style={imageAnimation} src={servicesImage} alt="Services" />
                 <ServiceContainer>
                     {services.map((service, index) => (
-                        <ServiceCard key={index} style={cardAnimation}>
+                        <ServiceCard key={index}>
                             <ServiceIcon>
                                 {service.icon}
                             </ServiceIcon>
@@ -173,13 +122,12 @@ const Services = () => {
                     ))}
                 </ServiceContainer>
 
-                <TechSection ref={ref}>
+                <TechSection>
                     <Title>{t('tech_info_title')}</Title>
                     <Desc>{t('tech_info_desc')}</Desc>
                     <TechContent>
                         <TechLeft>
                             <TechStep 
-                                style={stepAnimation}
                                 onMouseEnter={() => handleMouseEnter('domain')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -197,7 +145,6 @@ const Services = () => {
                                 </StepContent>
                             </TechStep>
                             <TechStep 
-                                style={stepAnimation}
                                 onMouseEnter={() => handleMouseEnter('hosting')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -208,7 +155,6 @@ const Services = () => {
                                 </StepContent>
                             </TechStep>
                             <TechStep 
-                                style={stepAnimation}
                                 onMouseEnter={() => handleMouseEnter('ssl')}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -223,7 +169,6 @@ const Services = () => {
                             <RocketImage 
                                 src={getImage()}
                                 alt="Proceso de desarrollo web"
-                                style={rocketAnimation}
                             />
                         </TechRight>
                     </TechContent>

@@ -13,22 +13,28 @@ export const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 80px 0;
+    padding: 50px 0px;
     clip-path: polygon(0 0, 100% 0, 100% 100%,100% 98%, 0 100%);
+    
+    @media (max-width: 960px) {
+        padding: 30px 0px;
+    }
 `;
 
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 100%;
     max-width: 1350px;
-    padding: 10px 0px 100px 0;
+    padding: 80px 0;
     gap: 12px;
+    
     @media (max-width: 960px) {
         flex-direction: column;
+        padding: 40px 20px;
     }
 `;
 
@@ -38,10 +44,12 @@ export const Title = styled.div`
     font-weight: 600;
     margin-top: 20px;
     color: ${({ theme }) => theme.text_primary};
+    padding: 0 20px;
     
     @media (max-width: 768px) {
         margin-top: 12px;
         font-size: 32px;
+        padding: 0 16px;
     }
 `;
 
@@ -50,12 +58,13 @@ export const Desc = styled.div`
     text-align: center;
     max-width: 600px;
     color: ${({ theme }) => theme.text_secondary};
-    line-height: 1.5;
-    margin-bottom: 20px;
+    padding: 0 20px;
+    margin: 20px 0;
     
     @media (max-width: 768px) {
-        margin-top: 12px;
         font-size: 16px;
+        padding: 0 16px;
+        margin: 12px 0;
     }
 `;
 
@@ -98,21 +107,14 @@ export const Divider = styled.div`
 export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 28px;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 0 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 28px;
+    padding: 20px;
     
-    @media (max-width: 960px) {
-        gap: 20px;
-        padding: 0 20px;
-    }
-    
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
+        padding: 16px;
         gap: 16px;
-        padding: 0 16px;
     }
 `;
 
@@ -141,79 +143,55 @@ export const AdditionalAnimatedImage = styled(animated.img)`
 `;
 
 export const LoadMoreButton = styled.button`
-    padding: 12px 32px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px 24px;
+    background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
-    background: linear-gradient(225deg, 
-        ${({ theme }) => theme.primary} 0%, 
-        ${({ theme }) => theme.primary + "dd"} 100%
-    );
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     border: none;
-    position: relative;
-    overflow: hidden;
-    margin-top: 40px;
     transition: all 0.3s ease;
+    margin-top: 24px;
     
     &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255,255,255,0.2) 50%,
-            transparent 100%
-        );
-        transition: left 0.5s ease;
-    }
-    
-    &:hover::before {
-        left: 100%;
+        background: ${({ theme }) => theme.primary + 'dd'};
+        transform: translateY(-2px);
     }
     
     @media (max-width: 768px) {
-        padding: 10px 24px;
         font-size: 14px;
+        padding: 10px 20px;
+        margin: 20px 16px;
     }
 `;
 
 export const FilterContainer = styled.div`
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 22px 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 20px 0;
+    padding: 0 20px;
     
     @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 12px;
+        padding: 0 16px;
+        width: 100%;
     }
 `;
 
 export const FilterGroup = styled.div`
     display: flex;
-    border: 1.5px solid ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.primary};
-    font-size: 16px;
-    border-radius: 12px;
-    font-weight: 500;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
     
     @media (max-width: 768px) {
-        font-size: 12px;
         width: 100%;
-        justify-content: center;
+        gap: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 `;
 
@@ -238,42 +216,17 @@ export const FilterButton = styled.button`
     }
     
     @media (max-width: 768px) {
-        padding: 6px 12px;
-        border-radius: 4px;
-        flex: 1;
+        padding: 10px 16px;
+        border-radius: 6px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
     }
 `;
 
 export const FilterDivider = styled.div`
     width: 1.5px;
     background: ${({ theme }) => theme.primary};
-`;
-
-export const YearSelect = styled.select`
-    padding: 8px 16px;
-    font-size: 16px;
-    border-radius: 12px;
-    border: 1.5px solid ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.primary};
-    background: transparent;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    
-    &:hover, &:focus {
-        background: ${({ theme }) => theme.primary + 8};
-    }
-    
-    option {
-        color: ${({ theme }) => theme.text_primary};
-        background: ${({ theme }) => theme.card};
-    }
-    
-    @media (max-width: 768px) {
-        width: 100%;
-        font-size: 14px;
-        padding: 6px 12px;
-    }
 `;
 
 export const FloatingInfo = styled(animated.div)`
@@ -292,58 +245,4 @@ export const FloatingInfo = styled(animated.div)`
     @media (max-width: 1024px) {
         display: none;
     }
-`;
-
-export const InfoText = styled.div`
-    color: ${({ theme }) => theme.text_primary};
-    font-size: 14px;
-    font-weight: 500;
-    background: linear-gradient(
-        225deg,
-        ${({ theme }) => theme.primary + "20"} 0%,
-        ${({ theme }) => theme.primary + "50"} 100%
-    );
-    padding: 12px 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
-    border: 1px solid ${({ theme }) => theme.primary + "30"};
-    position: relative;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        right: 30px;
-        width: 15px;
-        height: 15px;
-        background: inherit;
-        border-right: 1px solid ${({ theme }) => theme.primary + "30"};
-        border-bottom: 1px solid ${({ theme }) => theme.primary + "30"};
-        transform: rotate(45deg);
-        backdrop-filter: blur(5px);
-    }
-`;
-
-export const ClickIcon = styled.div`
-    width: 40px;
-    height: 40px;
-    background: ${({ theme }) => theme.primary + "40"};
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px auto 0;
-    
-    svg {
-        color: ${({ theme }) => theme.text_primary};
-        font-size: 20px;
-    }
-`;
-
-export const HandPointer = styled(animated.img)`
-    width: 80px;
-    height: auto;
-    transform: rotate(-15deg);
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
 `;

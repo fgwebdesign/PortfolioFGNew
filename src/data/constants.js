@@ -316,7 +316,7 @@ export const experiences = [
     img: practia,
     role: "role_qa_frontend",
     company: "company_practia",
-    date: "2024 - actual",
+    date: "2024 - 2024",
     desc: "experience_practiauruguay",
     skills: [
       "React Js",
