@@ -1,0 +1,9 @@
+# https://www.fgwebdesign.dev/
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.fgwebdesign.dev/sitemap.xml
+
+# Optimizaciones para rastreo
+Crawl-delay: 10 

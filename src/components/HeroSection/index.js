@@ -15,17 +15,19 @@ const HeroSection = () => {
     const buttonProps = useSpring({ to: { opacity: 1, transform: 'translateX(0)' }, from: { opacity: 0, transform: 'translateX(-40px)' }, delay: 600 });
 
     return (
-        <div id="about">
-            <HeroContainer>
-                <HeroBg>
+        <header id="about">
+            <HeroContainer role="banner">
+                <HeroBg aria-hidden="true">
                     <HeroBgAnimation />
                 </HeroBg>
                 <HeroInnerContainer>
                     <HeroLeftContainer>
-                        <Title>{t('welcome')}<br /> <span id="bio-name">{t('bioName')}</span></Title>
+                        <Title as="h1">
+                            {t('welcome')}<br /> 
+                            <span id="bio-name" itemProp="name">{t('bioName')}</span>
+                        </Title>
                         <TextLoop>
-
-                            <Span>
+                            <Span role="text" aria-label={t('professional_roles')}>
                                 <Typewriter
                                     options={{
                                         strings: Bio.roles,
@@ -34,20 +36,30 @@ const HeroSection = () => {
                                     }}
                                 />
                             </Span>
-
                         </TextLoop>
                         <animated.div style={buttonProps}>
-                        <ResumeButton href={Bio.resume} target='display'>{t('resumeButton')}</ResumeButton>
+                            <ResumeButton 
+                                href={Bio.resume} 
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                aria-label={t('download_resume')}
+                            >
+                                {t('resumeButton')}
+                            </ResumeButton>
                         </animated.div>
                     </HeroLeftContainer>
                     <HeroRightContainer>
                         <animated.div style={logoProps}>
-                            <Img src={HeroImg} alt="hero-image" />
+                            <Img 
+                                src={HeroImg} 
+                                alt={t('profile_image_alt')} 
+                                itemProp="image"
+                            />
                         </animated.div>
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>
-        </div>
+        </header>
     );
 }
 
