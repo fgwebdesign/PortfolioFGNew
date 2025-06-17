@@ -17,9 +17,12 @@ import harmony2 from '../../images/clients/harmony2.png';
 import harmony3 from '../../images/clients/harmony3.png';
 import schpsy1 from '../../images/clients/schpsy1.png';
 import schpsy2 from '../../images/clients/schpsy2.png';
+import estudiocb2 from '../../images/clients/estudiocb2.png';
+import estudiocb3 from '../../images/clients/estudiocb3.png';
 
 // Mapeo de proyectos a sus imágenes adicionales
 const projectImages = {
+    'Estudio Casa Brava': [estudiocb2, estudiocb3],
     'Casa Brava E-Commerce': [casab1, casab2],
     'SUEN Uruguay': [suen2, suen3],
     'Demicheri Fitness': [dem2, dem3],

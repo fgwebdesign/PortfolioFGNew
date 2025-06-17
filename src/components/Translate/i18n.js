@@ -12,7 +12,8 @@ i18n
           "portfolioLink": "Portfolio",
           "experienceLink": "Experience",
           "educationLink": "Education",
-          "contactLink": "Contact Me",
+          "contactLink": "Contact",
+          "servicesLink": "Services",
           "welcome": "WELCOME",
           "bioName": "FG WEB DESIGNS",
           "resumeButton": "Download CV",
@@ -97,7 +98,93 @@ i18n
           "category_landing_page": "Landing Page",
           "category_web_catalogue": "Web Catalogue",
           "allCategories": "All",
-          "allYears": "All years"
+          "allYears": "All years",
+          "loadMore": "Load more",
+          "servicesTitle": "Services",
+          "servicesDescription": "Discover the comprehensive range of services I offer to help your business grow online.",
+          "service_web_dev_title": "Web Development",
+          "service_web_dev_desc": "Custom web development solutions using modern technologies and best practices.",
+          "service_web_dev_feature1": "Custom Website Development",
+          "service_web_dev_feature2": "E-commerce Solutions",
+          "service_web_dev_feature3": "Web Application Development",
+          "service_web_design_title": "Web Design",
+          "service_web_design_desc": "Creative and responsive web design that captures your brand's essence.",
+          "service_web_design_feature1": "UI/UX Design",
+          "service_web_design_feature2": "Responsive Design",
+          "service_web_design_feature3": "Brand Integration",
+          "service_qa_title": "Quality Assurance",
+          "service_qa_desc": "Comprehensive testing and quality assurance services for web applications.",
+          "service_qa_feature1": "Manual Testing",
+          "service_qa_feature2": "Automated Testing",
+          "service_qa_feature3": "Performance Testing",
+          "service_responsive_title": "Responsive Development",
+          "service_responsive_desc": "Mobile-first development ensuring your site works perfectly on all devices.",
+          "service_responsive_feature1": "Mobile-First Approach",
+          "service_responsive_feature2": "Cross-Browser Compatibility",
+          "service_responsive_feature3": "Performance Optimization",
+          "service_seo_title": "SEO Optimization",
+          "service_seo_desc": "Improve your website's visibility and ranking in search engines.",
+          "service_seo_feature1": "On-Page SEO",
+          "service_seo_feature2": "Technical SEO",
+          "service_seo_feature3": "Performance Optimization",
+          "service_contact_button": "Get in touch",
+          
+          "service_email_title": "Corporate Email",
+          "service_email_desc": "Professional email solutions for your business with your own domain.",
+          "service_email_feature1": "Custom Email Addresses",
+          "service_email_feature2": "Email Configuration",
+          "service_email_feature3": "Technical Support",
+
+          "tech_info_title": "Essential Technical Information",
+          "tech_info_desc": "Understanding the key components of your web presence",
+          
+          "domain_title": "Domain Name",
+          "domain_desc": "Your domain is your unique web address <example>(e.g., www.yourcompany.com)</example>. It's the first thing visitors type to find your website and a crucial part of your online identity.",
+          
+          "hosting_title": "Web Hosting",
+          "hosting_desc": "Think of hosting as your website's home on the internet. It's where all your files, images, and content live, ensuring your site is accessible 24/7.",
+          
+          "ssl_title": "SSL Certificate",
+          "ssl_desc": "SSL certificates encrypt data between your website and its visitors, showing the padlock icon in browsers. It's essential for security and trust, especially for business websites.",
+          "techInfo": {
+            title: "What do you need to get your website online?",
+            subtitle: "Discover the essential steps to launch your professional web presence",
+            domain: {
+              title: "1. Domain Registration",
+              desc: "Your domain is your internet address (e.g., www.yourcompany.com). It's the first step in establishing your digital identity and making it easy for customers to find you."
+            },
+            hosting: {
+              title: "2. Web Hosting",
+              desc: "Hosting is where your website lives. We provide a secure and reliable server that keeps your website accessible 24/7, with automatic backups and technical support."
+            },
+            ssl: {
+              title: "3. SSL Security Certificate",
+              desc: "Protect your visitors' information with an SSL certificate. This not only improves security but also boosts your Google ranking and builds trust with your users."
+            }
+          },
+          "about_title": "About Me",
+          "want_to_know": "Want to know",
+          "more_about_me": "more about me?",
+          "about_description": "Hi! I'm a passionate web developer and quality assurance professional with extensive experience in creating and testing web applications. I specialize in modern technologies and best practices to deliver high-quality solutions. My journey in tech has been driven by a constant desire to learn and grow, allowing me to work on diverse projects and with various technologies.",
+          
+          "years_experience": "Years of Experience",
+          "projects_completed": "Projects Completed",
+          "satisfied_clients": "Satisfied Clients",
+          "countries": "Countries",
+          "contact_me": "Contact me",
+          "about": {
+            title: "Want to know more about me?",
+            subtitle: "Contact me!",
+            description: "I am a full stack web developer with experience in web and mobile application development. I specialize in developing web applications using React, Node.js and MongoDB.",
+            years: "Years of experience",
+            projects: "Completed projects",
+            clients: "Satisfied clients",
+            countries: "Countries",
+            contact: "Contact",
+            location: "Montevideo, Uruguay",
+            phone: "+598 92 033 831",
+            linkedin: "LinkedIn"
+          }
         }
       },
       es: {
@@ -108,6 +195,7 @@ i18n
           "experienceLink": "Experiencia",
           "educationLink": "Educación",
           "contactLink": "Contacto",
+          "servicesLink": "Servicios",
           "welcome": "BIENVENIDO",
           "bioName": "FG WEB DESIGNS",
           "resumeButton": "Descargar CV",
@@ -190,7 +278,93 @@ i18n
           "category_landing_page": "Landing Page",
           "category_web_catalogue": "Catálogo Web",
           "allCategories": "Todos",
-          "allYears": "Todos los años"
+          "allYears": "Todos los años",
+          "loadMore": "Cargar más",
+          "servicesTitle": "Servicios",
+          "servicesDescription": "Descubre la gama completa de servicios que ofrezco para ayudar a tu negocio a crecer en línea.",
+          "service_web_dev_title": "Desarrollo Web",
+          "service_web_dev_desc": "Soluciones de desarrollo web personalizadas utilizando tecnologías modernas y mejores prácticas.",
+          "service_web_dev_feature1": "Desarrollo de Sitios Web Personalizados",
+          "service_web_dev_feature2": "Soluciones E-commerce",
+          "service_web_dev_feature3": "Desarrollo de Aplicaciones Web",
+          "service_web_design_title": "Diseño Web",
+          "service_web_design_desc": "Diseño web creativo y responsivo que captura la esencia de tu marca.",
+          "service_web_design_feature1": "Diseño UI/UX",
+          "service_web_design_feature2": "Diseño Responsivo",
+          "service_web_design_feature3": "Integración de Marca",
+          "service_qa_title": "Control de Calidad",
+          "service_qa_desc": "Servicios completos de pruebas y aseguramiento de calidad para aplicaciones web.",
+          "service_qa_feature1": "Pruebas Manuales",
+          "service_qa_feature2": "Pruebas Automatizadas",
+          "service_qa_feature3": "Pruebas de Rendimiento",
+          "service_responsive_title": "Desarrollo Responsivo",
+          "service_responsive_desc": "Desarrollo mobile-first asegurando que tu sitio funcione perfectamente en todos los dispositivos.",
+          "service_responsive_feature1": "Enfoque Mobile-First",
+          "service_responsive_feature2": "Compatibilidad Cross-Browser",
+          "service_responsive_feature3": "Optimización de Rendimiento",
+          "service_seo_title": "Optimización SEO",
+          "service_seo_desc": "Mejora la visibilidad y el ranking de tu sitio web en los motores de búsqueda.",
+          "service_seo_feature1": "SEO On-Page",
+          "service_seo_feature2": "SEO Técnico",
+          "service_seo_feature3": "Optimización de Rendimiento",
+          "service_contact_button": "Contactar",
+          
+          "service_email_title": "Correo Corporativo",
+          "service_email_desc": "Soluciones de correo profesional para tu empresa con tu propio dominio.",
+          "service_email_feature1": "Direcciones de Correo Personalizadas",
+          "service_email_feature2": "Configuración de Correos",
+          "service_email_feature3": "Soporte Técnico",
+
+          "tech_info_title": "Información Técnica Esencial",
+          "tech_info_desc": "Entendiendo los componentes clave de tu presencia web",
+          
+          "domain_title": "Nombre de Dominio",
+          "domain_desc": "Tu dominio es tu dirección web única <example>(ej: www.tuempresa.com)</example>. Es lo primero que tus visitantes escriben para encontrar tu sitio web y una parte crucial de tu identidad en línea.",
+          
+          "hosting_title": "2. Alojamiento Web",
+          "hosting_desc": "Piensa en el hosting como la casa de tu sitio web en internet. Es donde viven todos tus archivos, imágenes y contenido, asegurando que tu sitio esté accesible 24/7.",
+          
+          "ssl_title": "3. Certificado SSL",
+          "ssl_desc": "Los certificados SSL encriptan los datos entre tu sitio web y sus visitantes, mostrando el ícono del candado en los navegadores. Es esencial para la seguridad y la confianza, especialmente para sitios web empresariales.",
+          "techInfo": {
+            title: "¿Qué precisas para tener tu sitio web activo?",
+            subtitle: "Descubre los pasos esenciales para lanzar tu presencia web profesional",
+            domain: {
+              title: "1. Registro de Dominio",
+              desc: "El dominio es tu dirección en internet (ej: www.tuempresa.com). Es el primer paso para establecer tu identidad digital y hacer que tus clientes te encuentren fácilmente."
+            },
+            hosting: {
+              title: "2. Alojamiento Web",
+              desc: "El hosting es donde vive tu sitio web. Proporcionamos un servidor seguro y confiable que mantiene tu sitio web accesible 24/7, con respaldos automáticos y soporte técnico."
+            },
+            ssl: {
+              title: "3. Certificado de Seguridad SSL",
+              desc: "Protege la información de tus visitantes con un certificado SSL. Esto no solo mejora la seguridad, sino que también aumenta tu ranking en Google y genera confianza en tus usuarios."
+            }
+          },
+          "about_title": "Sobre Mí",
+          "want_to_know": "¿Quieres saber",
+          "more_about_me": "más sobre mí?",
+          "about_description": "¡Hola! Soy un desarrollador web y profesional de control de calidad apasionado, con amplia experiencia en la creación y prueba de aplicaciones web. Me especializo en tecnologías modernas y mejores prácticas para entregar soluciones de alta calidad. Mi trayectoria en tecnología ha estado impulsada por un deseo constante de aprender y crecer, lo que me ha permitido trabajar en diversos proyectos y con variadas tecnologías.",
+          
+          "years_experience": "Años de Experiencia",
+          "projects_completed": "Proyectos Completados",
+          "satisfied_clients": "Clientes Satisfechos",
+          "countries": "Países",
+          "contact_me": "Contáctame",
+          "about": {
+            title: "¿Quieres saber más sobre mí?",
+            subtitle: "Contáctame!",
+            description: "Soy un desarrollador web full stack con experiencia en el desarrollo de aplicaciones web y móviles. Me especializo en el desarrollo de aplicaciones web utilizando React, Node.js y MongoDB.",
+            years: "Años de experiencia",
+            projects: "Proyectos completados",
+            clients: "Clientes satisfechos",
+            countries: "Países",
+            contact: "Contacto",
+            location: "Montevideo, Uruguay",
+            phone: "+598 92 033 831",
+            linkedin: "LinkedIn"
+          }
         }
       }
     },

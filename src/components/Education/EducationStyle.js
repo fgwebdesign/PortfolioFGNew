@@ -88,3 +88,29 @@ align-items: center;
 justify-content: center;
 gap: 12px;
 `;
+
+export const LoadMoreButton = styled.button`
+  padding: 12px 24px;
+  margin-top: 16px;
+  background: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:hover {
+    background: ${({ theme }) => theme.primary + 'dd'};
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+`;

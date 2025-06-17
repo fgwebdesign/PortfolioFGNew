@@ -1,5 +1,4 @@
-
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -11,23 +10,26 @@ import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constants';
 import { useSpring } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
-import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo, AnimatedImageTwo, AnimatedImageThree } from './ExperienceStlye';
+import { Container, Wrapper, Title, Desc, TimelineSection, AnimatedImage, LeftAnimatedImage, LeftAnimatedImageTwo, AnimatedImageTwo, AnimatedImageThree, LoadMoreButton } from './ExperienceStlye';
 import experienceImage from '../../images/timeline.png';
 import leftImageExperience from '../../images/route.png';
 import leftImageExperienceTwo from '../../images/pc1.png';
 import rightImageExperience from '../../images/exp.png';
 import rightImageExperienceTwo from '../../images/nubes.png';
-
-
-
+import { FaChevronDown } from 'react-icons/fa';
 
 const Experience = () => {
     const { t } = useTranslation();
+    const [visibleItems, setVisibleItems] = useState(3);
 
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5,
     });
+
+    const handleLoadMore = () => {
+        setVisibleItems(prev => prev + 3);
+    };
 
     const props = useSpring({
         from: { transform: 'translateX(100%)', opacity: 0 },
@@ -65,6 +67,9 @@ const Experience = () => {
         config: { tension: 20, friction: 10 },
     });
 
+    const visibleExperiences = experiences.slice(0, visibleItems);
+    const hasMoreItems = visibleItems < experiences.length;
+
     return (
         <Container id="experience">
             <Wrapper>
@@ -79,11 +84,11 @@ const Experience = () => {
                 </Desc>
                 <TimelineSection>
                     <Timeline>
-                        {experiences.map((experience, index) => (
+                        {visibleExperiences.map((experience, index) => (
                             <TimelineItem key={experience.id}>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length - 1 && <TimelineConnector />}
+                                    {index !== visibleExperiences.length - 1 && <TimelineConnector />}
                                 </TimelineSeparator>
                                 <TimelineContent>
                                     <ExperienceCard experience={experience} />
@@ -91,6 +96,11 @@ const Experience = () => {
                             </TimelineItem>
                         ))}
                     </Timeline>
+                    {hasMoreItems && (
+                        <LoadMoreButton onClick={handleLoadMore}>
+                            {t('loadMore')} <FaChevronDown />
+                        </LoadMoreButton>
+                    )}
                 </TimelineSection>
             </Wrapper>
         </Container>

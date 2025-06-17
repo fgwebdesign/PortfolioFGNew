@@ -46,6 +46,7 @@ import casabravaecomm from '../images/clients/casab.png'
 import demicherifit from '../images/clients/dem.png'
 import schpsyco from '../images/clients/schpsy.png'
 import suen from '../images/clients/suen.png'
+import estudiocb from '../images/clients/estudiocb1.png'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -581,6 +582,24 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 0,
+    title: "Estudio Casa Brava",
+    date: "2025",
+    image: estudiocb,
+    tags: [
+      "Next Js",
+      "Tailwind CSS",
+      "TypeScript",
+      "React Js",
+    ],
+    category: "landing page",
+    url: "https://www.estudiocasabrava.com",
+    description: {
+      en: "Professional website for a design studio, featuring a modern design with service sections, team profiles, and contact forms. Built with Next.js for optimal performance.",
+      es: "Sitio web profesional para un estudio de diseño de interiores, con un diseño moderno que incluye secciones de servicios, perfiles del equipo y formularios de contacto. Construido con Next.js para un rendimiento óptimo."
+    }
+  },
   {
     id: 1,
     title: "Casa Brava E-Commerce",
