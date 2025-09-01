@@ -47,6 +47,8 @@ import demicherifit from '../images/clients/dem.png'
 import schpsyco from '../images/clients/schpsy.png'
 import suen from '../images/clients/suen.png'
 import estudiocb from '../images/clients/estudiocb1.png'
+import startqalogo from '../images/startqav2.png'
+import dracostore from '../images/clients/dracostore.png'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -375,7 +377,7 @@ export const experiences = [
   },
   {
     id: 4,
-    img: startqa,
+    img: startqalogo,
     role: "role_qa_automation",
     company: "company_startqa",
     date: "2022 - 2024",
@@ -394,7 +396,7 @@ export const experiences = [
   },
   {
     id: 5,
-    img: startqa,
+    img: startqalogo,
     role: "role_qa_automation_manual",
     company: "company_startqa",
     date: "2022 - 2023",
@@ -413,7 +415,7 @@ export const experiences = [
   },
   {
     id: 6,
-    img: startqa,
+    img: startqalogo,
     role: "role_qa_manual",
     company: "company_startqa",
     date: "2022 - 2022",
@@ -432,7 +434,7 @@ export const experiences = [
   },
   {
     id: 7,
-    img: startqa,
+    img: startqalogo,
     role: "role_qa_automation_manual",
     company: "company_startqa",
     date: "2021 - 2022",
@@ -582,6 +584,24 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 0,
+    title: "Draco Store E-Commerce",
+    date: "2025",
+    image: dracostore,
+    tags: [
+      "Wordpress",
+      "WP Backery",
+      "WP Forms",
+      "WooCommerce",
+    ],
+    category: "e-commerce",
+    url: "https://dracostore.uy/",
+    description: {
+      en: "E-commerce for a store selling medical and sports equipment, with a modern and minimalist design. Built with WordPress for optimal performance.",
+      es: "E-commerce para una tienda que vende tecnología para el deporte y la salud, con un diseño moderno y minimalista. Construido con WordPress para un rendimiento óptimo."
+    }
+  },
   {
     id: 0,
     title: "Estudio Casa Brava",

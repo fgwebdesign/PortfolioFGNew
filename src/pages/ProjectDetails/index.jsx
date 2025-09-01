@@ -19,6 +19,8 @@ import schpsy1 from '../../images/clients/schpsy1.png';
 import schpsy2 from '../../images/clients/schpsy2.png';
 import estudiocb2 from '../../images/clients/estudiocb2.png';
 import estudiocb3 from '../../images/clients/estudiocb3.png';
+import dracostore1 from '../../images/clients/dracostore1.png';
+import dracostore2 from '../../images/clients/dracostore2.png';
 
 // Mapeo de proyectos a sus imágenes adicionales
 const projectImages = {
@@ -28,6 +30,7 @@ const projectImages = {
     'Demicheri Fitness': [dem2, dem3],
     'Harmony By Carola': [harmony2, harmony3],
     'Schweizer Psychology': [schpsy1, schpsy2],
+    'Draco Store E-Commerce': [dracostore1, dracostore2],
 };
 
 const Container = styled.div`
