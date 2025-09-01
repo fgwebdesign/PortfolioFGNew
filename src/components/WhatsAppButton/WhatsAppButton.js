@@ -42,8 +42,7 @@ const WhatsAppButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100 && !isOpen && !hasPlayed) {
-        setIsOpen(true);
+      if (window.scrollY > 300 && !hasPlayed) {
         play();
         setHasPlayed(true);
       }
@@ -52,8 +51,9 @@ const WhatsAppButton = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      stop(); // Aseguramos que el sonido se detenga al desmontar
     };
-  }, [isOpen, play, hasPlayed]);
+  }, [play, stop, hasPlayed]);
 
   const handleClick = () => {
     if (isOpen) {

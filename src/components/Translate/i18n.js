@@ -204,7 +204,14 @@ i18n
           "process_step3_desc": "We perform the production deployment, configure the domain, server, and SSL certificate. We deliver a fully functional and optimized website.",
           "process_step3_feature1": "Production server deployment",
           "process_step3_feature2": "Domain and SSL configuration",
-          "process_step3_feature3": "Documentation and usage training"
+          "process_step3_feature3": "Documentation and usage training",
+          
+          "whatsapp_contact": "Contact us via WhatsApp",
+          "whatsapp_schedule": "Office Hours",
+          "whatsapp_days": "Monday to Friday",
+          "whatsapp_hours": "7:00 AM - 6:00 PM",
+          "whatsapp_placeholder": "Write your message...",
+          "whatsapp_send": "Send Message"
         }
       },
       es: {
@@ -404,7 +411,14 @@ i18n
           "process_step3_desc": "Realizamos el despliegue en producción, configuramos el dominio, servidor y certificado SSL. Te entregamos un sitio web completamente funcional y optimizado.",
           "process_step3_feature1": "Despliegue en servidor de producción",
           "process_step3_feature2": "Configuración de dominio y SSL",
-          "process_step3_feature3": "Documentación y capacitación de uso"
+          "process_step3_feature3": "Documentación y capacitación de uso",
+          
+          "whatsapp_contact": "Contáctanos por WhatsApp",
+          "whatsapp_schedule": "Horario de Atención",
+          "whatsapp_days": "Lunes a Viernes",
+          "whatsapp_hours": "7:00 AM - 6:00 PM",
+          "whatsapp_placeholder": "Escribe tu mensaje...",
+          "whatsapp_send": "Enviar Mensaje"
         }
       }
     },

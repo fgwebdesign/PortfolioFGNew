@@ -16,6 +16,7 @@ import ProjectDetails from './pages/ProjectDetails';
 import Services from './components/Services';
 import ProcessSection from './components/ProcessSection';
 import About from './components/About';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import styled from 'styled-components';
 
 const Body = styled.div`
@@ -39,6 +40,7 @@ function App() {
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <Analytics />
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <WhatsAppButton />
         <Body>
           <Routes>
             <Route path="/" element={
