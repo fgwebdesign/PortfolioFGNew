@@ -125,6 +125,7 @@ export const AnimatedImage = styled(animated.img)`
     width: 210px; 
     height: auto; 
     z-index: 10;
+    filter: drop-shadow(0px 0px 8px rgba(255, 140, 0, 0.3));
     @media (max-width: 1024px) { 
         display: none; 
     }
@@ -137,6 +138,7 @@ export const AdditionalAnimatedImage = styled(animated.img)`
     top: 120px; 
     width: 210px; 
     height: auto; 
+    filter: drop-shadow(0px 0px 8px rgba(255, 140, 0, 0.3));
     @media (max-width: 1024px) { 
         display: none; 
     }
