@@ -49,6 +49,7 @@ import suen from '../images/clients/suen.png'
 import estudiocb from '../images/clients/estudiocb1.png'
 import startqalogo from '../images/startqav2.png'
 import dracostore from '../images/clients/dracostore.png'
+import cebala from '../images/clients/cebala.png'
 
 export const Bio = {
   name: "FG WEB DESIGNS",
@@ -582,7 +583,25 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Draco Store E-Commerce",
+    title: "Cebala E-Commerce",
+    date: "2025",
+    image: cebala,
+    tags: [
+      "Wordpress",
+      "Elementor",
+      "WP Forms",
+      "WP Staging",
+    ],
+    category: "e-commerce",
+    url: "https://cebala.com.uy/es/",
+    description: {
+      en: "E-commerce for a store selling mates, bulbs and accessories for the mate, with a modern and minimalist design. Built with WordPress for optimal performance.",
+      es: "E-commerce para una tienda que vende mates, bombillas y accesorios para el mate, con un diseño moderno y minimalista. Construido con WordPress para un rendimiento óptimo."
+    }
+  },
+  {
+    id: 1,
+    title: "DracoStore E-Commerce",
     date: "2025",
     image: dracostore,
     tags: [
@@ -599,7 +618,7 @@ export const projects = [
     }
   },
   {
-    id: 0,
+    id: 2,
     title: "Estudio Casa Brava",
     date: "2025",
     image: estudiocb,
@@ -617,7 +636,7 @@ export const projects = [
     }
   },
   {
-    id: 1,
+    id: 3,
     title: "Casa Brava E-Commerce",
     date: "2025",
     image: casabravaecomm,
@@ -635,7 +654,7 @@ export const projects = [
     }
   },
   {
-    id: 2,
+    id: 4,
     title: "Schweizer Psychology",
     date: "2025",
     image: schpsyco,
@@ -653,7 +672,7 @@ export const projects = [
     }
   },
   {
-    id: 3,
+    id: 5,
     title: "SUEN Uruguay",
     date: "2025",
     image: suen,
@@ -671,7 +690,7 @@ export const projects = [
     }
   },
   {
-    id: 4,
+    id: 6,
     title: "Demicheri Fitness",
     date: "2025",
     image: demicherifit,
@@ -689,7 +708,7 @@ export const projects = [
     }
   },
   {
-    id: 5,
+    id: 7,
     title: "Harmony By Carola",
     date: "2025",
     image: harmony,
@@ -707,7 +726,7 @@ export const projects = [
     }
   },
   {
-    id: 6,
+    id: 8,
     title: "Castelier Bienes Raíces",
     date: "2024",
     image: castelier,
@@ -720,7 +739,7 @@ export const projects = [
     category: "web catalogue",
   },
   {
-    id: 7,
+    id: 9,
     title: "Luz Uy Importaciones",
     date: "2024",
     image: luzuy,
@@ -733,7 +752,7 @@ export const projects = [
     category: "e-commerce",
   },
   {
-    id: 8,
+    id: 10,
     title: "RBG Estudio Jurídico",
     date: "2024",
     image: rbgestudio,
@@ -745,7 +764,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 9,
+    id: 11,
     title: "Picante Jerseys",
     date: "2024",
     image: picanteimage,
@@ -758,7 +777,7 @@ export const projects = [
     category: "e-commerce",
   },
   {
-    id: 10,
+    id: 12,
     title: "StartQA",
     date: "2024",
     image: startqa,
@@ -771,7 +790,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 11,
+    id: 13,
     title: "B & K Arquitectos",
     date: "2023",
     image: bykimage,
@@ -784,7 +803,7 @@ export const projects = [
     category: "web catalogue",
   },
   {
-    id: 12,
+    id: 14,
     title: "Shot By Jeydi",
     date: "2023",
     image: shotbyjeydiimage,
@@ -797,7 +816,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 13,
+    id: 15,
     title: "Del Arca Producciones",
     date: "2023",
     image: delarcaimage,
@@ -810,7 +829,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 14,
+    id: 16,
     title: "Moño Negro Catering",
     date: "2023",
     image: monionegroimage,
@@ -823,7 +842,7 @@ export const projects = [
     category: "web catalogue",
   },
   {
-    id: 15,
+    id: 17,
     title: "Drones orientales",
     date: "2023",
     image: logodrones,
@@ -836,7 +855,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 16,
+    id: 18,
     title: "Re-branding Duki Website",
     date: "2023",
     image: dukoimage,
@@ -849,7 +868,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 17,
+    id: 19,
     title: "Sabemar Turismo",
     date: "2022",
     image: sabemarimage,
@@ -862,7 +881,7 @@ export const projects = [
     category: "web catalogue",
   },
   {
-    id: 18,
+    id: 20,
     title: "Agribo Software",
     date: "2021",
     image: agriboimage,
@@ -875,7 +894,7 @@ export const projects = [
     category: "landing page",
   },
   {
-    id: 19,
+    id: 21,
     title: "Seven Containers",
     date: "2021",
     image: sevenimage,

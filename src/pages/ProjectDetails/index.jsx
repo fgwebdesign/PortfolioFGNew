@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { projects } from '../../data/constants';
-import { FaCode, FaArrowLeft, FaGlobe, FaCalendar, FaMapMarkerAlt, FaChevronLeft, FaChevronRight, FaMousePointer, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCode, FaArrowLeft, FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -21,6 +21,8 @@ import estudiocb2 from '../../images/clients/estudiocb2.png';
 import estudiocb3 from '../../images/clients/estudiocb3.png';
 import dracostore1 from '../../images/clients/dracostore1.png';
 import dracostore2 from '../../images/clients/dracostore2.png';
+import cebala2 from '../../images/clients/cebala2.png';
+import cebala3 from '../../images/clients/cebala3.png';
 
 // Mapeo de proyectos a sus imágenes adicionales
 const projectImages = {
@@ -31,6 +33,7 @@ const projectImages = {
     'Harmony By Carola': [harmony2, harmony3],
     'Schweizer Psychology': [schpsy1, schpsy2],
     'Draco Store E-Commerce': [dracostore1, dracostore2],
+    'Cebala E-Commerce': [cebala2, cebala3],
 };
 
 const Container = styled.div`
@@ -176,13 +179,6 @@ const Title = styled(motion.h1)`
     @media (max-width: 768px) {
         font-size: 36px;
     }
-`;
-
-const Description = styled.p`
-    font-size: 16px;
-    line-height: 1.8;
-    color: ${({ theme }) => theme.text_secondary};
-    margin-bottom: 40px;
 `;
 
 const InfoGrid = styled.div`
